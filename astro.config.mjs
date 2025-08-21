@@ -19,15 +19,15 @@ export default defineConfig({
         rehypeWrap,
         {
           selector: 'table',
-          wrapper: 'div.overflow-x-auto'
-        }
-      ]
-    ]
+          wrapper: 'div.overflow-x-auto',
+        },
+      ],
+    ],
   },
 
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
   },
 
-  integrations: [mdx()]
+  integrations: [mdx()],
 });

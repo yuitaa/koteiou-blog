@@ -3,8 +3,8 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 
 const args = process.argv.slice(2);
-let title = args[0]; // Use 'let' because title might be changed
-const customDir = args[1]; // Optional directory argument
+let title = args[0];
+const customDir = args[1];
 
 const today = new Date();
 const year = today.getFullYear();
@@ -12,7 +12,7 @@ const month = String(today.getMonth() + 1).padStart(2, '0');
 const day = String(today.getDate()).padStart(2, '0');
 const pubDate = `${year}-${month}-${day}`;
 
-let slug = `${pubDate}-${crypto.randomBytes(4).toString('hex')}`; // Prepend date to random string
+let slug = `${pubDate}-${crypto.randomBytes(4).toString('hex')}`;
 
 if (!title) {
   title = `${year}年${month}月${day}日`;

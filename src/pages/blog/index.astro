@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 
 const posts = (await getCollection('blog')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
@@ -11,18 +11,20 @@ const posts = (await getCollection('blog')).sort(
   <main>
     <h1>ブログ記事一覧</h1>
     <ul>
-      {posts.map((post) => (
-        <li>
-          <a href={`/blog/${post.slug}/`}>
-            <h2>{post.data.title}</h2>
-            <p>
-              <time datetime={post.data.pubDate.toISOString()}>
-                {post.data.pubDate.toLocaleDateString('ja-JP')}
-              </time>
-            </p>
-          </a>
-        </li>
-      ))}
+      {
+        posts.map((post) => (
+          <li>
+            <a href={`/blog/${post.slug}/`}>
+              <h2>{post.data.title}</h2>
+              <p>
+                <time datetime={post.data.pubDate.toISOString()}>
+                  {post.data.pubDate.toLocaleDateString('ja-JP')}
+                </time>
+              </p>
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </main>
 </Layout>
