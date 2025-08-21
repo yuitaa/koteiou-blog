@@ -1,12 +1,12 @@
 @import 'tailwindcss';
 @theme {
-  --color-primary: #007bff;
+  --color-primary: #0e452d;
   --color-secondary: #6c757d;
-  --color-accent: #28a745;
+  --color-accent: #1a784f;
   --color-text-primary: #212529;
   --color-text-secondary: #6c757d;
   --color-background-page: #ffffff;
-  --color-background-surface: #f8f9fa;
+  --color-background-surface: #eeeeee;
   --color-divider: #e9ecef;
 }
 
@@ -16,15 +16,15 @@
 .markdown h4,
 .markdown h5,
 .markdown h6 {
-  @apply font-bold text-text-primary mt-8 mb-4;
+  @apply font-bold text-text-primary pt-4 pb-4;
 }
 
 .markdown h1 {
-  @apply text-3xl border-b border-divider pb-2;
+  @apply text-3xl border-b border-divider;
 }
 
 .markdown h2 {
-  @apply text-2xl border-b border-divider pb-1;
+  @apply text-2xl border-b border-divider;
 }
 
 .markdown h3 {
@@ -36,7 +36,7 @@
 }
 
 .markdown a {
-  @apply text-primary no-underline hover:underline;
+  @apply text-primary underline hover:text-accent;
 }
 
 .markdown strong,
@@ -71,7 +71,7 @@
 }
 
 .markdown :not(pre) > code {
-  @apply bg-background-surface text-accent px-2;
+  @apply bg-background-surface text-accent px-1;
 }
 
 .markdown code {
@@ -95,7 +95,7 @@
 }
 
 .markdown hr {
-  @apply border-t border-divider my-8;
+  @apply border-t border-divider my-4;
 }
 
 .markdown table {
@@ -104,18 +104,17 @@
 
 .markdown th,
 .markdown td {
-  @apply border border-divider p-2 text-left;
+  @apply border border-divider px-4 py-0.5 text-left;
 }
 
-.markdown th[align="center"],
-.markdown td[align="center"] {
+.markdown th[align='center'],
+.markdown td[align='center'] {
   @apply text-center;
 }
-.markdown th[align="right"],
-.markdown td[align="right"] {
+.markdown th[align='right'],
+.markdown td[align='right'] {
   @apply text-right;
 }
-
 
 .markdown th {
   @apply bg-background-surface font-semibold;

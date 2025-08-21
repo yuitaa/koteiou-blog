@@ -4,6 +4,7 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import rehypeWrap from 'rehype-wrap';
 
 import mdx from '@astrojs/mdx';
 
@@ -11,7 +12,16 @@ import mdx from '@astrojs/mdx';
 export default defineConfig({
   markdown: {
     remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex],
+    rehypePlugins: [
+      rehypeKatex,
+      [
+        rehypeWrap,
+        {
+          selector: 'table',
+          wrapper: 'div.overflow-x-auto'
+        }
+      ]
+    ]
   },
 
   vite: {
