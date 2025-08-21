@@ -10,112 +10,118 @@
   --color-divider: #e9ecef;
 }
 
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4,
-.markdown h5,
-.markdown h6 {
-  @apply text-text-primary pt-4 pb-4 font-bold;
-}
+@layer base {
+  * {
+    @apply text-text-primary;
+  }
 
-.markdown h1 {
-  @apply border-divider border-b text-3xl;
-}
+  .markdown h1,
+  .markdown h2,
+  .markdown h3,
+  .markdown h4,
+  .markdown h5,
+  .markdown h6 {
+    @apply text-text-primary pt-4 pb-4 font-bold;
+  }
 
-.markdown h2 {
-  @apply border-divider border-b text-2xl;
-}
+  .markdown h1 {
+    @apply border-divider border-b text-3xl;
+  }
 
-.markdown h3 {
-  @apply text-xl;
-}
+  .markdown h2 {
+    @apply border-divider border-b text-2xl;
+  }
 
-.markdown p {
-  @apply text-text-primary my-4 text-base leading-relaxed;
-}
+  .markdown h3 {
+    @apply text-xl;
+  }
 
-.markdown a {
-  @apply text-primary hover:text-accent underline;
-}
+  .markdown p {
+    @apply text-text-primary my-4 text-base leading-relaxed;
+  }
 
-.markdown strong,
-.markdown b {
-  @apply font-bold;
-}
+  .markdown a {
+    @apply text-primary hover:text-accent underline;
+  }
 
-.markdown em,
-.markdown i {
-  @apply italic;
-}
+  .markdown strong,
+  .markdown b {
+    @apply font-bold;
+  }
 
-.markdown ul,
-.markdown ol {
-  @apply my-4 pl-6;
-}
+  .markdown em,
+  .markdown i {
+    @apply italic;
+  }
 
-.markdown ul {
-  @apply list-disc;
-}
+  .markdown ul,
+  .markdown ol {
+    @apply my-4 pl-6;
+  }
 
-.markdown ol {
-  @apply list-decimal;
-}
+  .markdown ul {
+    @apply list-disc;
+  }
 
-.markdown li {
-  @apply mb-2;
-}
+  .markdown ol {
+    @apply list-decimal;
+  }
 
-.markdown li > p {
-  @apply my-0;
-}
+  .markdown li {
+    @apply mb-2;
+  }
 
-.markdown :not(pre) > code {
-  @apply bg-background-surface text-accent px-1;
-}
+  .markdown li > p {
+    @apply my-0;
+  }
 
-.markdown code {
-  @apply font-mono text-sm;
-}
+  .markdown :not(pre) > code {
+    @apply bg-background-surface text-accent px-1;
+  }
 
-.markdown pre {
-  @apply bg-background-surface text-text-primary my-6 overflow-x-auto p-4;
-}
+  .markdown code {
+    @apply font-mono text-sm;
+  }
 
-.markdown pre > code {
-  @apply bg-transparent p-0;
-}
+  .markdown pre {
+    @apply bg-background-surface text-text-primary my-6 overflow-x-auto p-4;
+  }
 
-.markdown blockquote {
-  @apply border-accent text-text-secondary my-6 border-l-4 pl-4 italic;
-}
+  .markdown pre > code {
+    @apply bg-transparent p-0;
+  }
 
-.markdown img {
-  @apply mx-auto my-6 block h-auto max-h-[50vh] max-w-full rounded-md;
-}
+  .markdown blockquote {
+    @apply border-accent text-text-secondary my-6 border-l-4 pl-4 italic;
+  }
 
-.markdown hr {
-  @apply border-divider my-4 border-t;
-}
+  .markdown img {
+    @apply mx-auto my-6 block h-auto max-h-[50vh] max-w-full rounded-md;
+  }
 
-.markdown table {
-  @apply my-6 w-full border-collapse;
-}
+  .markdown hr {
+    @apply border-divider my-4 border-t;
+  }
 
-.markdown th,
-.markdown td {
-  @apply border-divider border px-4 py-0.5 text-left;
-}
+  .markdown table {
+    @apply my-6 w-full border-collapse;
+  }
 
-.markdown th[align='center'],
-.markdown td[align='center'] {
-  @apply text-center;
-}
-.markdown th[align='right'],
-.markdown td[align='right'] {
-  @apply text-right;
-}
+  .markdown th,
+  .markdown td {
+    @apply border-divider border px-4 py-0.5 text-left;
+  }
 
-.markdown th {
-  @apply bg-background-surface font-semibold;
+  .markdown th[align='center'],
+  .markdown td[align='center'] {
+    @apply text-center;
+  }
+  .markdown th[align='right'],
+  .markdown td[align='right'] {
+    @apply text-right;
+  }
+
+  .markdown th {
+    @apply bg-background-surface font-semibold;
+  }
 }
