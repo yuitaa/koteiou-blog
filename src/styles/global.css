@@ -1,1 +1,122 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@theme {
+  --color-primary: #007bff;
+  --color-secondary: #6c757d;
+  --color-accent: #28a745;
+  --color-text-primary: #212529;
+  --color-text-secondary: #6c757d;
+  --color-background-page: #ffffff;
+  --color-background-surface: #f8f9fa;
+  --color-divider: #e9ecef;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  @apply font-bold text-text-primary mt-8 mb-4;
+}
+
+.markdown h1 {
+  @apply text-3xl border-b border-divider pb-2;
+}
+
+.markdown h2 {
+  @apply text-2xl border-b border-divider pb-1;
+}
+
+.markdown h3 {
+  @apply text-xl;
+}
+
+.markdown p {
+  @apply text-base text-text-primary leading-relaxed my-4;
+}
+
+.markdown a {
+  @apply text-primary no-underline hover:underline;
+}
+
+.markdown strong,
+.markdown b {
+  @apply font-bold;
+}
+
+.markdown em,
+.markdown i {
+  @apply italic;
+}
+
+.markdown ul,
+.markdown ol {
+  @apply my-4 pl-6;
+}
+
+.markdown ul {
+  @apply list-disc;
+}
+
+.markdown ol {
+  @apply list-decimal;
+}
+
+.markdown li {
+  @apply mb-2;
+}
+
+.markdown li > p {
+  @apply my-0;
+}
+
+.markdown :not(pre) > code {
+  @apply bg-background-surface text-accent px-2;
+}
+
+.markdown code {
+  @apply font-mono text-sm;
+}
+
+.markdown pre {
+  @apply bg-background-surface text-text-primary p-4 my-6 overflow-x-auto;
+}
+
+.markdown pre > code {
+  @apply bg-transparent p-0;
+}
+
+.markdown blockquote {
+  @apply border-l-4 border-accent pl-4 italic text-text-secondary my-6;
+}
+
+.markdown img {
+  @apply max-w-full max-h-[50vh] h-auto my-6 rounded-md mx-auto block;
+}
+
+.markdown hr {
+  @apply border-t border-divider my-8;
+}
+
+.markdown table {
+  @apply w-full border-collapse my-6;
+}
+
+.markdown th,
+.markdown td {
+  @apply border border-divider p-2 text-left;
+}
+
+.markdown th[align="center"],
+.markdown td[align="center"] {
+  @apply text-center;
+}
+.markdown th[align="right"],
+.markdown td[align="right"] {
+  @apply text-right;
+}
+
+
+.markdown th {
+  @apply bg-background-surface font-semibold;
+}

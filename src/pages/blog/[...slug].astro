@@ -19,7 +19,7 @@ const description = post?.body?.replace(/(\r\n|\n|\r)/gm, " ").slice(0, 120) + '
 
 <Layout title={post.data.title} description={description}>
   <main>
-    <article>
+    <article class="markdown">
       <h1>{post.data.title}</h1>
       <p>{post.data.pubDate.toLocaleDateString('ja-JP')}</p>
       <div>
