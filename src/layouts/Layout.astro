@@ -43,7 +43,7 @@ const imageUrl = new URL(image, Astro.url).href;
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body class="m-0 min-h-full w-full">
     <slot />
   </body>
 </html>
@@ -51,9 +51,6 @@ const imageUrl = new URL(image, Astro.url).href;
 <style>
   html,
   body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
     font-size: 110%;
   }
 </style>

@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout>
+  <Header />
+  <main class="mx-auto max-w-[1200px] p-4">
+    <slot />
+  </main>
+</Layout>

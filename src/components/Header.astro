@@ -1,0 +1,21 @@
+---
+const links = [{ href: '/', text: 'Home' }];
+---
+
+<header class="bg-background-page al sticky top-0 z-1 p-1">
+  <div class="mx-auto flex max-w-[1200px] justify-between px-4">
+    <div class="font-bold hover:underline">
+      <a href="/">koteiou.pages.dev</a>
+    </div>
+
+    <nav class="flex gap-4">
+      {
+        links.map((link) => (
+          <a href={link.href} class="hover:underline">
+            {link.text}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
