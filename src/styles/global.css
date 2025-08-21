@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+@import 'katex/dist/katex.min.css';
+
 @theme {
   --color-primary: #0e452d;
   --color-secondary: #6c757d;
