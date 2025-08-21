@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 
 export interface Props {
 	title?: string;
@@ -8,11 +8,12 @@ export interface Props {
 }
 
 const {
-	title = "koteiou",
-	description = "yuitaのブログ",
+	title,
+	description = "koteiou.pages.dev",
 	image = "/twitter-card-piggy.png",
 } = Astro.props;
 
+const titleText = title ? `${title} | koteiou.pages.dev` : `koteiou.pages.dev`;
 const imageUrl = new URL(image, Astro.url).href;
 ---
 
@@ -24,15 +25,15 @@ const imageUrl = new URL(image, Astro.url).href;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{titleText}</title>
 		<meta name="theme-color" content="#1a784f" />
-		<meta property="og:title" content={title} />
+		<meta property="og:title" content={titleText} />
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content={imageUrl} />
 		<meta property="og:url" content={Astro.url} />
 		<meta property="og:type" content="website" />
 		<meta name="twitter:card" content="summary" />
-		<meta name="twitter:title" content={title} />
+		<meta name="twitter:title" content={titleText} />
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={imageUrl} />
 		<link

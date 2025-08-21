@@ -10,6 +10,7 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://koteiou.pages.dev/',
   markdown: {
     remarkPlugins: [remarkMath],
     rehypePlugins: [
