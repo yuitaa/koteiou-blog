@@ -17,5 +17,10 @@
     "rehype-wrap": "^1.1.0",
     "remark-math": "^6.0.0",
     "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.14"
   }
 }
