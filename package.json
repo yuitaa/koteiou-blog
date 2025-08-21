@@ -10,6 +10,7 @@
     "new-post": "node scripts/new-post.mjs"
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.3.4",
     "@tailwindcss/vite": "^4.1.12",
     "astro": "^5.13.2",
     "rehype-katex": "^7.0.1",
