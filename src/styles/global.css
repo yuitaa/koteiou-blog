@@ -10,7 +10,7 @@
   --color-background-page: #ffffff;
   --color-background-surface: #eeeeee;
   --color-divider: #e9ecef;
-  --color-article-note: #238f76;
+  --color-article-note: #000000;
 }
 
 @layer base {

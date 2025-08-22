@@ -14,10 +14,13 @@ import { Icon } from 'astro-icon/components';
         tags: string[];
         pubDate: Date;
       }) => {
-        const bandColor = { note: 'article-note' }?.[post.type];
+        const bandColor = {
+          note: 'border-l-article-note',
+          blog: 'border-l-accent',
+        }?.[post.type];
         return (
           <li
-            class={`border-divider my-2 border-2 p-2 ${bandColor ? `border-l-${bandColor} border-l-4` : ''}`}>
+            class={`border-divider my-2 border-2 p-2 ${bandColor ? `${bandColor} border-l-4` : ''}`}>
             <a
               href={post.url}
               target={post.newTab ? '_blank' : '_self'}
