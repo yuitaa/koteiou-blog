@@ -1,6 +1,3 @@
-import fs from 'fs';
-import path from 'path';
-
 /**
  * 指定されたnoteユーザーの記事一覧を取得する非同期関数
  * @param {string} username - 記事を取得したいnoteユーザーのユーザー名
@@ -53,28 +50,3 @@ export async function getNoteArticles(username) {
 
   return formattedArticles;
 }
-
-(async () => {
-  try {
-    const articles = await getNoteArticles('yuita');
-    console.log(`Fetched ${articles.length} articles.`);
-
-    const outputPath = path.join(
-      process.cwd(),
-      'src',
-      'data',
-      'noteArticles.json',
-    );
-    const outputDir = path.dirname(outputPath);
-
-    // ディレクトリが存在しない場合は作成
-    if (!fs.existsSync(outputDir)) {
-      fs.mkdirSync(outputDir, { recursive: true });
-    }
-
-    fs.writeFileSync(outputPath, JSON.stringify(articles));
-    console.log(`note articles saved to ${outputPath}`);
-  } catch (error) {
-    console.error('An error occurred:', error);
-  }
-})();
