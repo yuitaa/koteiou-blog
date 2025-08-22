@@ -12,8 +12,10 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.4",
+    "@iconify-json/mdi": "^1.2.3",
     "@tailwindcss/vite": "^4.1.12",
     "astro": "^5.13.2",
+    "astro-icon": "^1.1.5",
     "rehype-katex": "^7.0.1",
     "rehype-wrap": "^1.1.0",
     "remark-math": "^6.0.0",
