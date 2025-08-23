@@ -21,7 +21,10 @@ import { Icon } from 'astro-icon/components';
         }?.[post.type];
         return (
           <li
-            class={`border-divider my-2 border-2 p-2 ${bandColor ? `${bandColor} border-l-4` : ''}`}>
+            class:list={[
+              'border-divider mb-2 border-2 p-2 last:mb-0',
+              bandColor ? `${bandColor} border-l-4` : '',
+            ]}>
             <a
               href={post.url}
               target={post.newTab ? '_blank' : '_self'}
