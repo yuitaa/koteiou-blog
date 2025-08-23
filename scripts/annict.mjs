@@ -1,6 +1,12 @@
 import { ANNICT_ACCESS_TOKEN } from './consts.mjs';
 const API_URL = 'https://api.annict.com/v1/activities';
 
+/**
+ * 指定されたユーザー名とページ番号に基づいてAnnictのアクティビティを取得
+ * @param {string} username - Annictのユーザー名
+ * @param {number} page - 取得するページ番号
+ * @returns {Promise<Array<Object>>} アクティビティオブジェクトの配列を解決するPromise。
+ */
 export async function getAnnictActivities(username, page) {
   const url = new URL(API_URL);
   url.searchParams.append('access_token', ANNICT_ACCESS_TOKEN);
