@@ -32,3 +32,21 @@ export const unrailedMapData = unrailedMaps.map((map) => ({
 export const allPostData = [...blogData, ...noteData, ...unrailedMapData].sort(
   (a, b) => b.pubDate.valueOf() - a.pubDate.valueOf(),
 );
+
+export const allPostTags = [
+  ...new Set(
+    allPostData.flatMap((post) => post.tags.map((t) => t.toLowerCase())),
+  ),
+]
+  .map((tag) => ({
+    tag: tag,
+    count: allPostData.filter((post) =>
+      post.tags.map((t) => t.toLowerCase()).includes(tag),
+    ).length,
+  }))
+  .sort((a, b) => {
+    if (a.count !== b.count) {
+      return b.count - a.count;
+    }
+    return a.tag.localeCompare(b.tag);
+  });
