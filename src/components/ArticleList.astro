@@ -1,67 +1,69 @@
 ---
+export interface Props {
+  data: {
+    type: string;
+    url: string;
+    newTab: boolean;
+    title: string;
+    tags?: string[];
+    pubDate: Date;
+  }[];
+}
+
 const { data } = Astro.props;
 import { Icon } from 'astro-icon/components';
 ---
 
 <ul class="overflow-x-hidden">
   {
-    data.map(
-      (post: {
-        type: string;
-        url: string;
-        newTab: boolean;
-        title: string;
-        tags: string[];
-        pubDate: Date;
-      }) => {
-        const bandColor = {
-          note: 'border-l-article-note',
-          blog: 'border-l-accent',
-          custommap: 'border-l-article-u2',
-        }?.[post.type];
-        return (
-          <li
-            class:list={[
-              'border-divider mb-2 border-2 p-2 last:mb-0',
-              bandColor ? `${bandColor} border-l-4` : '',
-            ]}>
-            <a
-              href={post.url}
-              target={post.newTab ? '_blank' : '_self'}
-              rel={post.newTab ? 'noopener noreferrer' : undefined}
-              class="hover:underline">
-              <div class="flex justify-between gap-4">
-                <div class="flex items-center">
-                  <div class="bg-text-primary text-background-page mr-2 px-2 text-xs">
-                    {post.type}
-                  </div>
-                  <h2 class="mr-1 font-bold">{post.title}</h2>
-                  {post.newTab && <Icon name="mdi:external-link" />}
+    data.map((post) => {
+      const bandColor = {
+        note: 'border-l-article-note',
+        blog: 'border-l-accent',
+        custommap: 'border-l-article-u2',
+      }?.[post.type];
+      return (
+        <li
+          class:list={[
+            'border-divider mb-2 border-2 p-2 last:mb-0',
+            bandColor ? `${bandColor} border-l-4` : '',
+          ]}>
+          <a
+            href={post.url}
+            target={post.newTab ? '_blank' : '_self'}
+            rel={post.newTab ? 'noopener noreferrer' : undefined}
+            class="hover:underline">
+            <div class="flex justify-between gap-4">
+              <div class="flex items-center">
+                <div class="bg-text-primary text-background-page mr-2 px-2 text-xs">
+                  {post.type}
                 </div>
-                <time
-                  datetime={post.pubDate.toISOString()}
-                  class="text-text-secondary">
-                  {post.pubDate.toLocaleDateString('ja-JP', {
-                    year: 'numeric',
-                    month: '2-digit',
-                    day: '2-digit',
-                  })}
-                </time>
+                <h2 class="mr-1 font-bold">{post.title}</h2>
+                {post.newTab && <Icon name="mdi:external-link" />}
               </div>
-            </a>
+              <time
+                datetime={post.pubDate.toISOString()}
+                class="text-text-secondary">
+                {post.pubDate.toLocaleDateString('ja-JP', {
+                  year: 'numeric',
+                  month: '2-digit',
+                  day: '2-digit',
+                })}
+              </time>
+            </div>
+          </a>
 
-            {post.tags.length > 0 && (
-              <div class="mt-2 flex flex-wrap gap-1">
-                {post.tags.map((tag) => (
-                  <div class="bg-background-surface px-2 text-xs hover:underline">
-                    <a href={`/tag/${tag}`}>#{tag}</a>
-                  </div>
-                ))}
-              </div>
-            )}
-          </li>
-        );
-      },
-    )
+          {post.tags && post.tags.length > 0 && (
+            <div class="mt-2 flex flex-wrap gap-1">
+              {post.tags.map((tag) => (
+                <div class="bg-background-surface px-2 text-xs hover:underline">
+                  <a href={`/tag/${tag}`}>#{tag}</a>
+                </div>
+              ))}
+            </div>
+          )}
+        </li>
+      );
+    })
   }
 </ul>
