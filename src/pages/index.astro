@@ -1,14 +1,87 @@
 ---
 import ArticleList from '@/components/ArticleList.astro';
 import PageLayout from '@/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
 import { allPostData } from '@/utils/data.mjs';
+import { creations, links } from '@/utils/topPageData.mjs';
 ---
 
 <PageLayout>
+  <section class="markdown">
+    <h1>ようこそ！</h1>
+    <p>koteiou.pages.dev: yuitaが運営する暇つぶしのブログ</p>
+  </section>
+
+  <section class="markdown">
+    <h2>
+      <Icon name="mdi:link-variant" class="mr-2 inline" />リンクなど
+    </h2>
+    <ul>
+      {
+        links.map((link) => (
+          <li>
+            {link.icon} <strong>{link.name}</strong>:
+            {link.url ? (
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer nofollow">
+                {link.handle}
+              </a>
+            ) : (
+              <code>{link.handle}</code>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
   <section>
+    <h2 class="border-divider my-4 border-b text-2xl">
+      <Icon name="mdi:new-box" class="mr-2 inline" />最新の投稿
+    </h2>
     <ArticleList data={allPostData.slice(0, 6)} />
     <div class="util-link mt-2 text-right">
       <a href="/timeline">すべての投稿&gt;</a>
     </div>
+  </section>
+
+  <section class="markdown">
+    <h2>活動など</h2>
+    <h3>制作物</h3>
+    {
+      (() => {
+        return (
+          <ul>
+            {creations.map((creation) => (
+              <li>
+                {creation.url ? (
+                  <a
+                    href={creation.url}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow">
+                    {creation.name}
+                  </a>
+                ) : (
+                  creation.name
+                )}
+              </li>
+            ))}
+          </ul>
+        );
+      })()
+    }
+    <h3>大会</h3>
+    <ul>
+      <li>
+        Unrailed! Community Cup vol.3 出場 (シビレーザー)
+        <ul>
+          <li>Day 1. タイムアタック 合計2,571m 総合4位</li>
+          <li>Day 2. 対戦 準優勝</li>
+        </ul>
+      </li>
+      <li>U.L.T.R.A. 運営おてつだい</li>
+    </ul>
   </section>
 </PageLayout>
