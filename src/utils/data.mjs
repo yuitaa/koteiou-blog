@@ -34,11 +34,15 @@ export const allPostData = [...blogData, ...noteData, ...unrailedMapData].sort(
 );
 
 export const allPostTags = [
-  ...new Set(allPostData.flatMap((post) => post.tags)),
+  ...new Set(
+    allPostData.flatMap((post) => post.tags.map((t) => t.toLowerCase())),
+  ),
 ]
   .map((tag) => ({
-    tag,
-    count: allPostData.filter((post) => post.tags.includes(tag)).length,
+    tag: tag,
+    count: allPostData.filter((post) =>
+      post.tags.map((t) => t.toLowerCase()).includes(tag),
+    ).length,
   }))
   .sort((a, b) => {
     return a.tag.localeCompare(b.tag);
