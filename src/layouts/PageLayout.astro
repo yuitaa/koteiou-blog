@@ -1,11 +1,15 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
+import Layout from '@/layouts/Layout.astro';
+import Header from '@/components/Header.astro';
+import Sidebar from '@/components/Sidebar.astro';
 ---
 
 <Layout>
   <Header />
-  <main class="mx-auto max-w-[1200px] p-4">
-    <slot />
-  </main>
+  <div class="mx-auto grid max-w-[1200px] grid-cols-12 gap-2 p-4">
+    <main class="col-span-12 lg:col-span-9">
+      <slot />
+    </main>
+    <aside class="col-span-12 lg:col-span-3"><Sidebar /></aside>
+  </div>
 </Layout>
