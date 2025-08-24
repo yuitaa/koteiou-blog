@@ -25,7 +25,7 @@
   .markdown h4,
   .markdown h5,
   .markdown h6 {
-    @apply text-text-primary my-4 font-bold;
+    @apply text-text-primary mb-4 font-bold;
   }
 
   .markdown h1 {
@@ -137,5 +137,9 @@
 
   .util-list-circle {
     list-style: circle;
+  }
+
+  .util-heading {
+    @apply border-divider mb-4 border-b font-bold;
   }
 }
