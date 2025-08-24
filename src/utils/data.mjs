@@ -28,3 +28,7 @@ export const unrailedMapData = unrailedMaps.map((map) => ({
   url: `https://u2.unrailed-online.com/#/map/${map.shareId}`,
   newTab: true,
 }));
+
+export const allPostData = [...blogData, ...noteData, ...unrailedMapData].sort(
+  (a, b) => b.pubDate.valueOf() - a.pubDate.valueOf(),
+);

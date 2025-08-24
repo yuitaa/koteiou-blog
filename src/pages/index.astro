@@ -1,13 +1,14 @@
 ---
 import ArticleList from '@/components/ArticleList.astro';
 import PageLayout from '@/layouts/PageLayout.astro';
-import { blogData, noteData, unrailedMapData } from '@/utils/data.mjs';
-
-const posts = [...blogData, ...noteData, ...unrailedMapData].sort(
-  (a, b) => b.pubDate.valueOf() - a.pubDate.valueOf(),
-);
+import { allPostData } from '@/utils/data.mjs';
 ---
 
 <PageLayout>
-  <ArticleList data={posts} />
+  <section>
+    <ArticleList data={allPostData.slice(0, 6)} />
+    <div class="util-link mt-2 text-right">
+      <a href="/timeline">すべての投稿&gt;</a>
+    </div>
+  </section>
 </PageLayout>
