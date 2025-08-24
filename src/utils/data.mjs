@@ -45,5 +45,8 @@ export const allPostTags = [
     ).length,
   }))
   .sort((a, b) => {
+    if (a.count !== b.count) {
+      return b.count - a.count;
+    }
     return a.tag.localeCompare(b.tag);
   });
