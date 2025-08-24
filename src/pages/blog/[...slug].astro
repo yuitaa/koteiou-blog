@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
+import PageLayout from '../../layouts/PageLayout.astro';
 
 // This function is required for Astro to generate the pages at build time.
 export async function getStaticPaths() {
@@ -18,14 +18,32 @@ const description =
   post?.body?.replace(/(\r\n|\n|\r)/gm, ' ').slice(0, 120) + '...';
 ---
 
-<Layout title={post.data.title} description={description}>
-  <main>
-    <article class="markdown">
-      <h1>{post.data.title}</h1>
-      <p>{post.data.pubDate.toLocaleDateString('ja-JP')}</p>
-      <div>
-        <Content />
+<PageLayout title={post.data.title} description={description}>
+  <h1 class="util-heading text-3xl">
+    {post.data.title}
+  </h1>
+
+  <p class="text-text-secondary my-2 text-sm">
+    {post.data.pubDate.toLocaleDateString('ja-JP')}
+  </p>
+
+  {
+    post.data.tags && post.data.tags.length > 0 && (
+      <div class="my-2 flex flex-wrap gap-1">
+        {post.data?.tags?.map((tag) => (
+          <div class="bg-background-surface px-2 text-sm hover:underline">
+            <a href={`/tags/${decodeURIComponent(tag.toLocaleLowerCase())}`}>
+              #{tag}
+            </a>
+          </div>
+        ))}
       </div>
-    </article>
-  </main>
-</Layout>
+    )
+  }
+
+  <article class="markdown">
+    <div>
+      <Content />
+    </div>
+  </article>
+</PageLayout>
