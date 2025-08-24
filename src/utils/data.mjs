@@ -21,7 +21,7 @@ export const noteData = noteArticles.map((article) => ({
 }));
 
 export const unrailedMapData = unrailedMaps.map((map) => ({
-  type: 'customMap',
+  type: 'custommap',
   title: map.name,
   pubDate: new Date(map.lastUploadDate),
   tags: map.tags,
