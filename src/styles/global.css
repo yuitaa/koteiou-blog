@@ -25,7 +25,7 @@
   .markdown h4,
   .markdown h5,
   .markdown h6 {
-    @apply text-text-primary pt-4 pb-4 font-bold;
+    @apply text-text-primary my-4 font-bold;
   }
 
   .markdown h1 {
@@ -69,10 +69,6 @@
 
   .markdown ol {
     @apply list-decimal;
-  }
-
-  .markdown li {
-    @apply mb-2;
   }
 
   .markdown li > p {
