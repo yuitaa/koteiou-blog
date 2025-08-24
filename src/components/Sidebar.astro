@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import iconImage from '@/assets/yuita_300.png';
+import { allPostTags } from '@/utils/data.mjs';
 
 const links = [
   { href: '/', text: 'トップページ' },
@@ -57,4 +58,19 @@ const links = [
       ))
     }
   </ul>
+</section>
+
+<section class="border-divider mt-2 border-2 p-2">
+  <h2 class="font-bold">タグ一覧</h2>
+  <div class="flex flex-wrap gap-1 text-xs">
+    {
+      allPostTags.map((tag) => (
+        <a
+          class="bg-background-surface util-link p-1"
+          href={`/tags/${encodeURIComponent(tag.tag)}`}>
+          #{tag.tag} ({tag.count})
+        </a>
+      ))
+    }
+  </div>
 </section>
