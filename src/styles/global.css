@@ -15,7 +15,7 @@
 }
 
 @layer base {
-  * {
+  body {
     @apply text-text-primary;
   }
 
@@ -88,7 +88,7 @@
   }
 
   .markdown pre > code {
-    @apply bg-transparent p-0;
+    @apply text-background-page bg-transparent p-0;
   }
 
   .markdown blockquote {
