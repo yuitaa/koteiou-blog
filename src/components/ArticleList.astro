@@ -57,7 +57,10 @@ import { Icon } from 'astro-icon/components';
             <div class="mt-2 flex flex-wrap gap-1">
               {post.tags.map((tag) => (
                 <div class="bg-background-surface px-2 text-xs hover:underline">
-                  <a href={`/tag/${tag}`}>#{tag}</a>
+                  <a
+                    href={`/tags/${decodeURIComponent(tag.toLocaleLowerCase())}`}>
+                    #{tag}
+                  </a>
                 </div>
               ))}
             </div>
