@@ -132,6 +132,6 @@
 
 @layer utilities {
   .util-link {
-    @apply text-primary hover:text-accent underline;
+    @apply text-primary hover:text-accent hover:underline;
   }
 }
