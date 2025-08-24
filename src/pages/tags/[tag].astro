@@ -1,0 +1,28 @@
+---
+import ArticleList from '@/components/ArticleList.astro';
+import PageLayout from '@/layouts/PageLayout.astro';
+import { allPostData, allPostTags } from '@/utils/data.mjs';
+import { Icon } from 'astro-icon/components';
+
+export function getStaticPaths() {
+  return allPostTags.map((t) => ({
+    params: { tag: decodeURIComponent(t.tag) },
+    props: { count: t.count },
+  }));
+}
+const { tag } = Astro.params;
+const { count } = Astro.props;
+---
+
+<PageLayout title={`#${tag} (${count})`}>
+  <h2 class="border-divider mb-2 border-b text-2xl">
+    <Icon name="mdi:tag" class="inline" />
+    <span class="text-accent">#{tag}</span> 記事一覧
+  </h2>
+
+  <ArticleList
+    data={allPostData.filter((data) =>
+      data.tags?.map((t) => t.toLocaleLowerCase()).includes(tag),
+    )}
+  />
+</PageLayout>
