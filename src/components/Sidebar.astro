@@ -4,8 +4,15 @@ import iconImage from '@/assets/yuita_300.png';
 
 const links = [
   { href: '/', text: 'トップページ' },
-  { href: '/timeline', text: '投稿一覧' },
-  { href: '/temp', text: '仮', children: [{ href: '/temp', text: '仮' }] },
+  {
+    href: '/timeline',
+    text: '投稿一覧',
+    children: [
+      { href: '/timeline/blog', text: 'ブログ' },
+      { href: '/timeline/note', text: 'note' },
+      { href: '/timeline/custommap', text: 'カスタムマップ' },
+    ],
+  },
 ];
 ---
 
