@@ -1,4 +1,5 @@
 ---
+import { undefined } from 'astro:schema';
 import '../styles/global.css';
 
 export interface Props {
@@ -9,7 +10,7 @@ export interface Props {
 
 const {
   title,
-  description = 'koteiou.pages.dev',
+  description = null,
   image = '/twitter-card-piggy.png',
 } = Astro.props;
 
@@ -21,7 +22,7 @@ const imageUrl = new URL(image, Astro.url).href;
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
+    {description && <meta name="description" content={description} />}
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
@@ -29,13 +30,13 @@ const imageUrl = new URL(image, Astro.url).href;
     <meta name="theme-color" content="#1a784f" />
     <link rel="canonical" href={Astro.url.href} />
     <meta property="og:title" content={titleText} />
-    <meta property="og:description" content={description} />
+    {description && <meta property="og:description" content={description} />}
     <meta property="og:image" content={imageUrl} />
     <meta property="og:url" content={Astro.url} />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={titleText} />
-    <meta name="twitter:description" content={description} />
+    {description && <meta name="twitter:description" content={description} />}
     <meta name="twitter:image" content={imageUrl} />
   </head>
   <body class="m-0 min-h-full w-full">
