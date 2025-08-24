@@ -1,9 +1,15 @@
 ---
 import { Image } from 'astro:assets';
 import iconImage from '@/assets/yuita_300.png';
+
+const links = [
+  { href: '/', text: 'トップページ' },
+  { href: '/timeline', text: '投稿一覧' },
+  { href: '/temp', text: '仮', children: [{ href: '/temp', text: '仮' }] },
+];
 ---
 
-<div class="border-divider flex gap-2 border-2 p-2 lg:flex-col">
+<section class="border-divider flex gap-2 border-2 p-2 lg:flex-col">
   <div class="grid w-1/4 place-items-center lg:w-full">
     <Image
       src={iconImage}
@@ -18,4 +24,30 @@ import iconImage from '@/assets/yuita_300.png';
     <div>a.k.a. koteiou</div>
     <div>Unrailed! をプレイしています</div>
   </div>
-</div>
+</section>
+
+<section class="border-divider mt-2 border-2 p-2">
+  <h2 class="font-bold">目次</h2>
+  <ul class="util-list-circle pl-4">
+    {
+      links.map((item) => (
+        <li>
+          <a href={item.href} class="util-link">
+            {item.text}
+          </a>
+          {item.children && item.children.length > 0 && (
+            <ul class="util-list-l-shape pl-4">
+              {item.children.map((child) => (
+                <li>
+                  <a class="util-link" href={child.href}>
+                    {child.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+</section>

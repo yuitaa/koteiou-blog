@@ -134,4 +134,12 @@
   .util-link {
     @apply text-primary hover:text-accent hover:underline;
   }
+
+  .util-list-l-shape {
+    list-style: '└';
+  }
+
+  .util-list-circle {
+    list-style: circle;
+  }
 }
