@@ -22,10 +22,7 @@ import { creations, links } from '@/utils/topPageData.mjs';
           <li>
             {link.icon} <strong>{link.name}</strong>:
             {link.url ? (
-              <a
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer nofollow">
+              <a href={link.url} target="_blank" rel="noopener noreferrer">
                 {link.handle}
               </a>
             ) : (
@@ -60,7 +57,7 @@ import { creations, links } from '@/utils/topPageData.mjs';
                   <a
                     href={creation.url}
                     target="_blank"
-                    rel="noopener noreferrer nofollow">
+                    rel="noopener noreferrer">
                     {creation.name}
                   </a>
                 ) : (
@@ -72,6 +69,33 @@ import { creations, links } from '@/utils/topPageData.mjs';
         );
       })()
     }
+    <h3>スピードラン</h3>
+    <ul>
+      <li>
+        <a
+          href="https://youtu.be/bcavXn9ipYw"
+          rel="noopener noreferrer"
+          target="_blank">
+          [01:08:02.383] Unrailed!/Endless/Easy/1 Player/RS
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://youtu.be/K9LJR2uVRp0"
+          rel="noopener noreferrer"
+          target="_blank">
+          [01:04:06.650] Unrailed 2/Endless/1 Player/RS/v354 (参考記録)
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://youtu.be/TnHzAQC8_hE"
+          rel="noopener noreferrer"
+          target="_blank">
+          [00:37:41.483] Unrailed 2/Endless/4 Players/RS/v519 (参考記録)
+        </a>
+      </li>
+    </ul>
     <h3>大会</h3>
     <ul>
       <li>
