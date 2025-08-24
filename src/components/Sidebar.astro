@@ -14,6 +14,7 @@ const links = [
       { href: '/timeline/custommap', text: 'カスタムマップ' },
     ],
   },
+  { href: '/tags', text: 'タグ一覧' },
 ];
 ---
 
@@ -61,8 +62,10 @@ const links = [
 </section>
 
 <section class="border-divider mt-2 border-2 p-2">
-  <h2 class="font-bold">タグ一覧</h2>
-  <div class="flex flex-wrap gap-1 text-xs">
+  <h2 class="font-bold">
+    <a href="/tags" class="util-link">タグ一覧</a>
+  </h2>
+  <div class="mt-2 flex flex-wrap gap-1 text-xs">
     {
       allPostTags.map((tag) => (
         <a
