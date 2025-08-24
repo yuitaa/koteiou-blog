@@ -2,9 +2,15 @@
 import Layout from '@/layouts/Layout.astro';
 import Header from '@/components/Header.astro';
 import Sidebar from '@/components/Sidebar.astro';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
 ---
 
-<Layout>
+<Layout {...Astro.props}>
   <Header />
   <div class="mx-auto grid max-w-[1200px] grid-cols-12 gap-2 p-4">
     <main class="col-span-12 lg:col-span-9">
