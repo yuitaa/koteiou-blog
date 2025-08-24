@@ -27,6 +27,7 @@ const imageUrl = new URL(image, Astro.url).href;
     <meta name="generator" content={Astro.generator} />
     <title>{titleText}</title>
     <meta name="theme-color" content="#1a784f" />
+    <link rel="canonical" href={Astro.url.href} />
     <meta property="og:title" content={titleText} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={imageUrl} />
