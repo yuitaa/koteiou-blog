@@ -11,6 +11,8 @@ export interface Props {
 }
 
 const { data } = Astro.props;
+import { padZero } from '@/utils/date.mjs';
+import { getJstDate } from '@/utils/date.mjs';
 import { Icon } from 'astro-icon/components';
 ---
 
@@ -39,16 +41,27 @@ import { Icon } from 'astro-icon/components';
                   {post.type}
                 </div>
                 <h2 class="mr-1 font-bold">{post.title}</h2>
-                {post.newTab && <Icon name="mdi:external-link" />}
+
+                {post.newTab && (
+                  <div>
+                    <Icon name="mdi:external-link" />
+                  </div>
+                )}
               </div>
               <time
                 datetime={post.pubDate.toISOString()}
                 class="text-text-secondary">
-                {post.pubDate.toLocaleDateString('ja-JP', {
-                  year: 'numeric',
-                  month: '2-digit',
-                  day: '2-digit',
-                })}
+                {() => {
+                  const jstDate = getJstDate(post.pubDate);
+                  return (
+                    <div class="flex flex-col items-end sm:flex-row">
+                      <div>{jstDate[0]}/</div>
+                      <div>
+                        {padZero(jstDate[1])}/{padZero(jstDate[2])}
+                      </div>
+                    </div>
+                  );
+                }}
               </time>
             </div>
           </a>
