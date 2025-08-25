@@ -39,7 +39,12 @@ import { Icon } from 'astro-icon/components';
                   {post.type}
                 </div>
                 <h2 class="mr-1 font-bold">{post.title}</h2>
-                {post.newTab && <Icon name="mdi:external-link" />}
+
+                {post.newTab && (
+                  <div>
+                    <Icon name="mdi:external-link" />
+                  </div>
+                )}
               </div>
               <time
                 datetime={post.pubDate.toISOString()}
