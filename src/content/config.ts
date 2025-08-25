@@ -9,6 +9,18 @@ const blogCollection = defineCollection({
   }),
 });
 
+const annictCollection = defineCollection({
+  type: 'data',
+  schema: z.array(
+    z.object({
+      title: z.string(),
+      subtitle: z.string().nullable(),
+      createdAt: z.string().transform((str) => new Date(str)),
+    }),
+  ),
+});
+
 export const collections = {
   blog: blogCollection,
+  annict: annictCollection,
 };
