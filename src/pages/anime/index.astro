@@ -1,0 +1,50 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+import {
+  countDayOccurrences,
+  getOccurrencesBgColor,
+} from '@/utils/occurrences.mjs';
+
+import {
+  getDayOfWeek,
+  getDisplayDate,
+  getFirstDayOfWeek,
+} from '@/utils/date.mjs';
+
+import { annictData } from '@/utils/data.mjs';
+---
+
+<PageLayout title="視聴記録">
+  <div class="grid grid-cols-[repeat(8,auto)] gap-1">
+    <div class="opacity-0">Day</div>
+    <div><div class="absolute">Mon</div></div>
+    <div><div class="absolute hidden sm:block">Tue</div></div>
+    <div><div class="absolute">Wed</div></div>
+    <div><div class="absolute hidden sm:block">Thu</div></div>
+    <div><div class="absolute">Fri</div></div>
+    <div><div class="absolute hidden sm:block">Sat</div></div>
+    <div><div class="absolute">Sun</div></div>
+    {
+      annictData.toReversed().map((data) => {
+        const dayArray = data.data.map((record) =>
+          getDayOfWeek(record.createdAt),
+        );
+        const dayCount = countDayOccurrences(dayArray);
+        const firstDay = getFirstDayOfWeek(data.id);
+
+        return [
+          <a class="util-link font-bold" href={`/anime/${data.id}`}>
+            {firstDay[0]}年{firstDay[1]}月
+            {Math.trunc((firstDay[2] - 1) / 7) + 1}週
+          </a>,
+          dayCount.map((c, i) => (
+            <div
+              title={`${getDisplayDate(firstDay, i)} ${c}件の記録`}
+              class:list={['rounded-md', getOccurrencesBgColor(c)]}
+            />
+          )),
+        ];
+      })
+    }
+  </div>
+</PageLayout>
