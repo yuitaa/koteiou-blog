@@ -35,3 +35,13 @@ export function getDisplayDate(weekFirstDay, day) {
   date.setDate(date.getDate() + day);
   return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
 }
+
+export function getJstDate(date) {
+  const JST_OFFSET_HOURS = 9;
+  const jstDate = new Date(date.getTime() + JST_OFFSET_HOURS * 60 * 60 * 1000);
+  return [
+    jstDate.getUTCFullYear(),
+    jstDate.getUTCMonth() + 1,
+    jstDate.getUTCDate(),
+  ];
+}
