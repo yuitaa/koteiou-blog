@@ -1,0 +1,67 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '@/layouts/PageLayout.astro';
+import { countDayOccurrences } from '@/utils/occurrences.mjs';
+import {
+  getDayOfWeek,
+  getDisplayDate,
+  getFirstDayOfWeek,
+} from '@/utils/date.mjs';
+
+export async function getStaticPaths() {
+  const annictData = await getCollection('annict');
+  return annictData.map((data) => ({
+    params: { week: data.id },
+    props: data,
+  }));
+}
+
+const { week } = Astro.params;
+const { data } = Astro.props;
+
+const firstDay = getFirstDayOfWeek(week);
+const weekString = `${firstDay[0]}年${firstDay[1]}月${Math.trunc((firstDay[2] - 1) / 7) + 1}週`;
+
+const dayArray = data.map((record) => getDayOfWeek(record.createdAt));
+const dayCount = countDayOccurrences(dayArray);
+
+const dayOfWeekNames = ['月', '火', '水', '木', '金', '土', '日'];
+
+let currentIndex = 0;
+const slicedData = dayCount.map((count, index) => {
+  let slicedPart = data.slice(currentIndex, currentIndex + count);
+  currentIndex += count;
+  const dateString = getDisplayDate(firstDay, index).slice(5);
+
+  return { data: slicedPart, index, dateString };
+});
+---
+
+<PageLayout title={`視聴記録 ${weekString}`}>
+  <section class="markdown">
+    <h2>視聴記録 {weekString}</h2>
+
+    {
+      slicedData.map(
+        (d) =>
+          d.data.length !== 0 && [
+            <h3>
+              {d.dateString}({dayOfWeekNames[d.index]}) - {d.data.length}
+            </h3>,
+            <ul>
+              {d.data.map((r) => (
+                <li>
+                  {r.title}
+                  {r.subtitle && (
+                    <span class="text-text-secondary text-sm">
+                      {r.subtitle}
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>,
+          ],
+      )
+    }
+  </section>
+</PageLayout>

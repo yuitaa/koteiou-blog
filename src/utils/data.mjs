@@ -50,3 +50,7 @@ export const allPostTags = [
     }
     return a.tag.localeCompare(b.tag);
   });
+
+export const annictData = (await getCollection('annict')).sort((a, b) =>
+  a.id.localeCompare(b.id),
+);
