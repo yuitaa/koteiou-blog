@@ -11,9 +11,7 @@ const ANNICT_DATA_DIR = path.join('src', 'content', 'annict');
  * @returns {string}
  */
 function getWeekNumber(date) {
-  const d = new Date(
-    Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()),
-  );
+  const d = new Date(date.getTime() + 9 * 60 * 60 * 1000);
   const dayNum = d.getUTCDay() || 7;
   d.setUTCDate(d.getUTCDate() + 4 - dayNum);
   const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
