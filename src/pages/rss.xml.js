@@ -10,8 +10,6 @@ export async function GET(context) {
     items: blog.map((post) => ({
       title: post.data.title,
       pubDate: post.data.pubDate,
-      description:
-        post.body.length > 1000 ? post.body.slice(0, 1000) + '...' : post.body,
       link: `/blog/${post.slug}/`,
     })),
   });
