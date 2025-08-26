@@ -2,306 +2,367 @@
   {
     "title": "まったく最近の探偵ときたら",
     "subtitle": "第4話「絶叫館殺人事件／マキちゃんとジェネレーションギャップ」",
-    "createdAt": "2025-07-27T15:40:32.000Z"
+    "createdAt": "2025-07-27T15:40:32.000Z",
+    "sortNumber": 400
   },
   {
     "title": "ホテル・インヒューマンズ",
     "subtitle": "request 4.「コープス・リバイバー」",
-    "createdAt": "2025-07-28T02:00:05.000Z"
+    "createdAt": "2025-07-28T02:00:05.000Z",
+    "sortNumber": 400
   },
   {
     "title": "彼女、お借りします 第4期",
     "subtitle": "満足度40「決意と彼女-キメカノ-」",
-    "createdAt": "2025-07-28T02:00:07.000Z"
+    "createdAt": "2025-07-28T02:00:07.000Z",
+    "sortNumber": 4000
   },
   {
     "title": "ワールドダイスター",
     "subtitle": "第九場「ワールドダイスター」",
-    "createdAt": "2025-07-28T09:29:01.000Z"
+    "createdAt": "2025-07-28T09:29:01.000Z",
+    "sortNumber": 900
   },
   {
     "title": "ワールドダイスター",
     "subtitle": "第八場「ロミオとジュリエット」",
-    "createdAt": "2025-07-28T09:29:01.000Z"
+    "createdAt": "2025-07-28T09:29:01.000Z",
+    "sortNumber": 800
   },
   {
     "title": "ワールドダイスター",
     "subtitle": "第七場「自分を信じて」",
-    "createdAt": "2025-07-28T09:29:01.000Z"
+    "createdAt": "2025-07-28T09:29:01.000Z",
+    "sortNumber": 700
   },
   {
     "title": "ローリング☆ガールズ",
     "subtitle": "第2話「世界のまん中」",
-    "createdAt": "2025-07-28T11:47:31.000Z"
+    "createdAt": "2025-07-28T11:47:31.000Z",
+    "sortNumber": 20
   },
   {
     "title": "ローリング☆ガールズ",
     "subtitle": "第1話「キング・オブ・ルーキー」",
-    "createdAt": "2025-07-28T11:47:31.000Z"
+    "createdAt": "2025-07-28T11:47:31.000Z",
+    "sortNumber": 10
   },
   {
     "title": "宇宙人ムームー",
     "subtitle": "第16話「ムームーとアクションカメラ」",
-    "createdAt": "2025-07-29T00:07:44.000Z"
+    "createdAt": "2025-07-29T00:07:44.000Z",
+    "sortNumber": 1600
   },
   {
     "title": "青春ブタ野郎はサンタクロースの夢を見ない",
     "subtitle": "第4話「正義の味方」",
-    "createdAt": "2025-07-29T03:32:36.000Z"
+    "createdAt": "2025-07-29T03:32:36.000Z",
+    "sortNumber": 400
   },
   {
     "title": "サイレント・ウィッチ 沈黙の魔女の隠しごと",
     "subtitle": "#4「完璧な式」",
-    "createdAt": "2025-07-29T03:54:58.000Z"
+    "createdAt": "2025-07-29T03:54:58.000Z",
+    "sortNumber": 400
   },
   {
     "title": "その着せ替え人形は恋をする Season 2",
     "subtitle": "第16話「あたしの体の事、全部知ってるんだ」",
-    "createdAt": "2025-07-29T04:21:02.000Z"
+    "createdAt": "2025-07-29T04:21:02.000Z",
+    "sortNumber": 1600
   },
   {
     "title": "冴えない彼女の育てかた",
     "subtitle": "#7「敵か味方か新キャラか」",
-    "createdAt": "2025-07-29T08:59:46.000Z"
+    "createdAt": "2025-07-29T08:59:46.000Z",
+    "sortNumber": 70
   },
   {
     "title": "冴えない彼女の育てかた",
     "subtitle": "#6「二人の夜の選択肢」",
-    "createdAt": "2025-07-29T08:59:46.000Z"
+    "createdAt": "2025-07-29T08:59:46.000Z",
+    "sortNumber": 60
   },
   {
     "title": "Turkey!",
     "subtitle": "4投目「混乱のビッグフォー」",
-    "createdAt": "2025-07-29T23:29:03.000Z"
+    "createdAt": "2025-07-29T23:29:03.000Z",
+    "sortNumber": 400
   },
   {
     "title": "ふたりソロキャンプ",
     "subtitle": "第3話「ギア沼にご用心」",
-    "createdAt": "2025-07-30T00:12:29.000Z"
+    "createdAt": "2025-07-30T00:12:29.000Z",
+    "sortNumber": 300
   },
   {
     "title": "Summer Pockets",
     "subtitle": "第17話「夏鳥の儀」",
-    "createdAt": "2025-07-30T00:37:20.000Z"
+    "createdAt": "2025-07-30T00:37:20.000Z",
+    "sortNumber": 1700
   },
   {
     "title": "瑠璃の宝石",
     "subtitle": "第4話「砂を繙く」",
-    "createdAt": "2025-07-30T03:44:13.000Z"
+    "createdAt": "2025-07-30T03:44:13.000Z",
+    "sortNumber": 400
   },
   {
     "title": "ワールドダイスター",
     "subtitle": "第十二場「きっとふたりで」",
-    "createdAt": "2025-07-30T06:25:33.000Z"
+    "createdAt": "2025-07-30T06:25:33.000Z",
+    "sortNumber": 1200
   },
   {
     "title": "ワールドダイスター",
     "subtitle": "第十一場「私たちの約束」",
-    "createdAt": "2025-07-30T06:25:33.000Z"
+    "createdAt": "2025-07-30T06:25:33.000Z",
+    "sortNumber": 1100
   },
   {
     "title": "ワールドダイスター",
     "subtitle": "第十場「それぞれの幻影」",
-    "createdAt": "2025-07-30T06:25:33.000Z"
+    "createdAt": "2025-07-30T06:25:33.000Z",
+    "sortNumber": 1000
   },
   {
     "title": "ローリング☆ガールズ",
     "subtitle": "第4話「夢」",
-    "createdAt": "2025-07-30T13:22:54.000Z"
+    "createdAt": "2025-07-30T13:22:54.000Z",
+    "sortNumber": 40
   },
   {
     "title": "ローリング☆ガールズ",
     "subtitle": "第3話「英雄にあこがれて」",
-    "createdAt": "2025-07-30T13:22:54.000Z"
+    "createdAt": "2025-07-30T13:22:54.000Z",
+    "sortNumber": 30
   },
   {
     "title": "トニカクカワイイ ～SNS～",
     "subtitle": null,
-    "createdAt": "2025-07-30T22:45:15.000Z"
+    "createdAt": "2025-07-30T22:45:15.000Z",
+    "sortNumber": null
   },
   {
     "title": "トニカクカワイイ ～制服～",
     "subtitle": null,
-    "createdAt": "2025-07-30T23:26:55.000Z"
+    "createdAt": "2025-07-30T23:26:55.000Z",
+    "sortNumber": null
   },
   {
     "title": "冴えない彼女の育てかた",
     "subtitle": "#9「八年ぶりの個別ルート」",
-    "createdAt": "2025-07-31T00:15:00.000Z"
+    "createdAt": "2025-07-31T00:15:00.000Z",
+    "sortNumber": 90
   },
   {
     "title": "冴えない彼女の育てかた",
     "subtitle": "#8「当て馬トラウマ回想モード」",
-    "createdAt": "2025-07-31T00:15:00.000Z"
+    "createdAt": "2025-07-31T00:15:00.000Z",
+    "sortNumber": 80
   },
   {
     "title": "トラペジウム",
     "subtitle": null,
-    "createdAt": "2025-07-31T14:32:07.000Z"
+    "createdAt": "2025-07-31T14:32:07.000Z",
+    "sortNumber": null
   },
   {
     "title": "銀河特急 ミルキー☆サブウェイ",
     "subtitle": "第5話「排除くん」",
-    "createdAt": "2025-07-31T21:12:17.000Z"
+    "createdAt": "2025-07-31T21:12:17.000Z",
+    "sortNumber": 500
   },
   {
     "title": "わたしが恋人になれるわけないじゃん、ムリムリ!（※ムリじゃなかった!?）",
     "subtitle": "第4話「真唯なんて、やっぱりムリムリ！(※ムリじゃなかった!?)」",
-    "createdAt": "2025-07-31T21:12:21.000Z"
+    "createdAt": "2025-07-31T21:12:21.000Z",
+    "sortNumber": 400
   },
   {
     "title": "雨と君と",
     "subtitle": "第4話「夏祭り」",
-    "createdAt": "2025-07-31T23:44:24.000Z"
+    "createdAt": "2025-07-31T23:44:24.000Z",
+    "sortNumber": 400
   },
   {
     "title": "CITY THE ANIMATION",
     "subtitle": "第4話「タナベさんのホシ／世にも奇妙な訪問者／タナベさんと穂高／真壁鶴菱の黄昏／つづく／えっちゃんと本場とパンまつり／人間交錯点」",
-    "createdAt": "2025-08-01T01:36:29.000Z"
+    "createdAt": "2025-08-01T01:36:29.000Z",
+    "sortNumber": 400
   },
   {
     "title": "BanG Dream! 2nd Season",
     "subtitle": "#3「Sing Girls」",
-    "createdAt": "2025-08-01T01:36:31.000Z"
+    "createdAt": "2025-08-01T01:36:31.000Z",
+    "sortNumber": 30
   },
   {
     "title": "神椿市建設中。",
     "subtitle": "第4話「悪意 -Malice-」",
-    "createdAt": "2025-08-01T07:05:36.000Z"
+    "createdAt": "2025-08-01T07:05:36.000Z",
+    "sortNumber": 400
   },
   {
     "title": "うたごえはミルフィーユ",
     "subtitle": "第3話「さいあくだ」",
-    "createdAt": "2025-08-01T07:35:08.000Z"
+    "createdAt": "2025-08-01T07:35:08.000Z",
+    "sortNumber": 300
   },
   {
     "title": "カッコウの許嫁 Season2",
     "subtitle": "4羽目「みなさんおそろいで」",
-    "createdAt": "2025-08-01T14:40:07.000Z"
+    "createdAt": "2025-08-01T14:40:07.000Z",
+    "sortNumber": 400
   },
   {
     "title": "タコピーの原罪",
     "subtitle": "第6話「2016年のきみたちへ」",
-    "createdAt": "2025-08-01T15:23:24.000Z"
+    "createdAt": "2025-08-01T15:23:24.000Z",
+    "sortNumber": 600
   },
   {
     "title": "サイレント・ウィッチ 沈黙の魔女の隠しごと",
     "subtitle": "#5「沈黙の魔女の冒険」",
-    "createdAt": "2025-08-01T22:18:17.000Z"
+    "createdAt": "2025-08-01T22:18:17.000Z",
+    "sortNumber": 500
   },
   {
     "title": "ゲーセン少女と異文化交流",
     "subtitle": "第4話「Can I Get a Minute?」",
-    "createdAt": "2025-08-02T00:42:55.000Z"
+    "createdAt": "2025-08-02T00:42:55.000Z",
+    "sortNumber": 400
   },
   {
     "title": "女子高生の無駄づかい",
     "subtitle": "第2話「まんが」",
-    "createdAt": "2025-08-02T02:01:35.000Z"
+    "createdAt": "2025-08-02T02:01:35.000Z",
+    "sortNumber": 200
   },
   {
     "title": "女子高生の無駄づかい",
     "subtitle": "第1話「すごい」",
-    "createdAt": "2025-08-02T02:01:35.000Z"
+    "createdAt": "2025-08-02T02:01:35.000Z",
+    "sortNumber": 100
   },
   {
     "title": "女子高生の無駄づかい",
     "subtitle": "第4話「まじめ」",
-    "createdAt": "2025-08-02T03:06:33.000Z"
+    "createdAt": "2025-08-02T03:06:33.000Z",
+    "sortNumber": 400
   },
   {
     "title": "女子高生の無駄づかい",
     "subtitle": "第3話「わすれもの」",
-    "createdAt": "2025-08-02T03:06:33.000Z"
+    "createdAt": "2025-08-02T03:06:33.000Z",
+    "sortNumber": 300
   },
   {
     "title": "よふかしのうた Season2",
     "subtitle": "第4夜「走れるようになりたいかい？」",
-    "createdAt": "2025-08-02T05:22:04.000Z"
+    "createdAt": "2025-08-02T05:22:04.000Z",
+    "sortNumber": 400
   },
   {
     "title": "渡くんの××が崩壊寸前",
     "subtitle": "第5話「理想の人」",
-    "createdAt": "2025-08-02T06:09:38.000Z"
+    "createdAt": "2025-08-02T06:09:38.000Z",
+    "sortNumber": 500
   },
   {
     "title": "女子高生の無駄づかい",
     "subtitle": "第5話「りりぃ」",
-    "createdAt": "2025-08-02T08:02:23.000Z"
+    "createdAt": "2025-08-02T08:02:23.000Z",
+    "sortNumber": 500
   },
   {
     "title": "女子高生の無駄づかい",
     "subtitle": "第8話「みずぎかい」",
-    "createdAt": "2025-08-02T09:18:13.000Z"
+    "createdAt": "2025-08-02T09:18:13.000Z",
+    "sortNumber": 800
   },
   {
     "title": "女子高生の無駄づかい",
     "subtitle": "第7話「やまい」",
-    "createdAt": "2025-08-02T09:18:13.000Z"
+    "createdAt": "2025-08-02T09:18:13.000Z",
+    "sortNumber": 700
   },
   {
     "title": "女子高生の無駄づかい",
     "subtitle": "第6話「まじょ」",
-    "createdAt": "2025-08-02T09:18:13.000Z"
+    "createdAt": "2025-08-02T09:18:13.000Z",
+    "sortNumber": 600
   },
   {
     "title": "女子高生の無駄づかい",
     "subtitle": "第12話「なかま」",
-    "createdAt": "2025-08-02T13:27:22.000Z"
+    "createdAt": "2025-08-02T13:27:22.000Z",
+    "sortNumber": 1200
   },
   {
     "title": "女子高生の無駄づかい",
     "subtitle": "第11話「ゆめ」",
-    "createdAt": "2025-08-02T13:27:22.000Z"
+    "createdAt": "2025-08-02T13:27:22.000Z",
+    "sortNumber": 1100
   },
   {
     "title": "女子高生の無駄づかい",
     "subtitle": "第10話「ろぼ」",
-    "createdAt": "2025-08-02T13:27:22.000Z"
+    "createdAt": "2025-08-02T13:27:22.000Z",
+    "sortNumber": 1000
   },
   {
     "title": "女子高生の無駄づかい",
     "subtitle": "第9話「おしゃれ」",
-    "createdAt": "2025-08-02T13:27:22.000Z"
+    "createdAt": "2025-08-02T13:27:22.000Z",
+    "sortNumber": 900
   },
   {
     "title": "薫る花は凛と咲く",
     "subtitle": "第4話「心の温度」",
-    "createdAt": "2025-08-03T00:27:09.000Z"
+    "createdAt": "2025-08-03T00:27:09.000Z",
+    "sortNumber": 400
   },
   {
     "title": "プリンセッション・オーケストラ",
     "subtitle": "第17話「律動する熱情」",
-    "createdAt": "2025-08-03T00:58:49.000Z"
+    "createdAt": "2025-08-03T00:58:49.000Z",
+    "sortNumber": 1700
   },
   {
     "title": "フードコートで、また明日。",
     "subtitle": "#4「キャラメルリボン／別方向だけど／臭くはない／一般的和田」",
-    "createdAt": "2025-08-03T02:22:42.000Z"
+    "createdAt": "2025-08-03T02:22:42.000Z",
+    "sortNumber": 400
   },
   {
     "title": "9-nine- Ruler's Crown",
     "subtitle": "Branch 06",
-    "createdAt": "2025-08-03T02:22:48.000Z"
+    "createdAt": "2025-08-03T02:22:48.000Z",
+    "sortNumber": 600
   },
   {
     "title": "ばっどがーる",
     "subtitle": "#05「しじみとホタテ／わっこいい♡／まな板へようこそ／涼風さんは誤解されやすい」",
-    "createdAt": "2025-08-03T05:22:05.000Z"
+    "createdAt": "2025-08-03T05:22:05.000Z",
+    "sortNumber": 500
   },
   {
     "title": "ぐらんぶる Season 2",
     "subtitle": "第4話「チケット争奪戦」",
-    "createdAt": "2025-08-03T05:22:06.000Z"
+    "createdAt": "2025-08-03T05:22:06.000Z",
+    "sortNumber": 400
   },
   {
     "title": "VTuberなんだが配信切り忘れたら伝説になってた",
     "subtitle": "第一話",
-    "createdAt": "2025-08-03T08:18:53.000Z"
+    "createdAt": "2025-08-03T08:18:53.000Z",
+    "sortNumber": 100
   },
   {
     "title": "ウィッチウォッチ",
     "subtitle": "第18話「カラちゃんとシキ／狂騒のビーダマニア／スクランブル・スクラップ・スクワッド」",
-    "createdAt": "2025-08-03T08:56:24.000Z"
+    "createdAt": "2025-08-03T08:56:24.000Z",
+    "sortNumber": 1800
   }
 ]
