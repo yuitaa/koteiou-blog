@@ -7,6 +7,15 @@ import {
   getDisplayDate,
   getFirstDayOfWeek,
 } from '@/utils/date.mjs';
+import ArticlePagination from '@/components/ArticlePagination.astro';
+
+function generateWeekString(week: string | null) {
+  if (!week) {
+    return null;
+  }
+  const firstDay = getFirstDayOfWeek(week);
+  return `${firstDay[0]}年${firstDay[1]}月${Math.trunc((firstDay[2] - 1) / 7) + 1}週`;
+}
 
 export async function getStaticPaths() {
   const annictData = (await getCollection('annict')).sort((a, b) =>
@@ -26,7 +35,7 @@ const { week } = Astro.params;
 const { data, previousWeek, nextWeek } = Astro.props;
 
 const firstDay = getFirstDayOfWeek(week);
-const weekString = `${firstDay[0]}年${firstDay[1]}月${Math.trunc((firstDay[2] - 1) / 7) + 1}週`;
+const weekString = generateWeekString(week);
 
 const dayArray = data.map((record) => getDayOfWeek(record.createdAt));
 const dayCount = countDayOccurrences(dayArray);
@@ -69,5 +78,14 @@ const slicedData = dayCount.map((count, index) => {
           ],
       )
     }
+  </section>
+  <section class="my-2">
+    <ArticlePagination
+      previous={{
+        title: generateWeekString(previousWeek),
+        link: `/anime/${previousWeek}`,
+      }}
+      next={{ title: generateWeekString(nextWeek), link: `/anime/${nextWeek}` }}
+    />
   </section>
 </PageLayout>
