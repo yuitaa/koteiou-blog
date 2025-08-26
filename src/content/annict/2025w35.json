@@ -2,61 +2,85 @@
   {
     "title": "ホテル・インヒューマンズ",
     "subtitle": "request 8.「スパイダー」",
-    "createdAt": "2025-08-25T02:07:34.000Z"
+    "createdAt": "2025-08-25T02:07:34.000Z",
+    "sortNumber": 800
   },
   {
     "title": "彼女、お借りします 第4期",
     "subtitle": "満足度44「紐と彼女-ポロカノ-」",
-    "createdAt": "2025-08-25T02:32:59.000Z"
+    "createdAt": "2025-08-25T02:32:59.000Z",
+    "sortNumber": 4400
   },
   {
     "title": "CITY THE ANIMATION",
-    "subtitle": "第8話",
-    "createdAt": "2025-08-25T03:03:13.000Z"
+    "subtitle": "第8話「タナベさんの恋わずらい★／本官の意地／満更／光岳の演出作家魂／ブティック／出陣／初恋／劇団テカリダケ第7回公演『のど』」",
+    "createdAt": "2025-08-25T03:03:13.000Z",
+    "sortNumber": 800
   },
   {
     "title": "まったく最近の探偵ときたら",
     "subtitle": "第8話「名雲のサイバー事件簿／怪盗のメソッド／探偵助手の休日」",
-    "createdAt": "2025-08-25T04:41:41.000Z"
+    "createdAt": "2025-08-25T04:41:41.000Z",
+    "sortNumber": 800
   },
   {
     "title": "ハミダシクリエイティブ",
     "subtitle": "第4話「戦うな」",
-    "createdAt": "2025-08-25T13:03:48.000Z"
+    "createdAt": "2025-08-25T13:03:48.000Z",
+    "sortNumber": 400
   },
   {
     "title": "ハミダシクリエイティブ",
     "subtitle": "第3話「800SP募集くらいのやつ」",
-    "createdAt": "2025-08-25T13:03:48.000Z"
+    "createdAt": "2025-08-25T13:03:48.000Z",
+    "sortNumber": 300
   },
   {
     "title": "ハミダシクリエイティブ",
     "subtitle": "第2話「白鳥は画面のむこう側でうんたらかんたら」",
-    "createdAt": "2025-08-25T13:03:48.000Z"
+    "createdAt": "2025-08-25T13:03:48.000Z",
+    "sortNumber": 200
   },
   {
     "title": "ハミダシクリエイティブ",
     "subtitle": "第1話「たこ焼きクリエイティブ」",
-    "createdAt": "2025-08-25T13:03:48.000Z"
+    "createdAt": "2025-08-25T13:03:48.000Z",
+    "sortNumber": 100
   },
   {
     "title": "宇宙人ムームー",
     "subtitle": "第20話「アキヒロとタンクレストイレ」",
-    "createdAt": "2025-08-26T00:07:35.000Z"
+    "createdAt": "2025-08-26T00:07:35.000Z",
+    "sortNumber": 2000
   },
   {
     "title": "Wake Up, Girls！",
     "subtitle": "#3「一番優しく」",
-    "createdAt": "2025-08-26T01:20:04.000Z"
+    "createdAt": "2025-08-26T01:20:04.000Z",
+    "sortNumber": 3
   },
   {
     "title": "Wake Up, Girls！",
     "subtitle": "#2「ステージを踏む少女たち」",
-    "createdAt": "2025-08-26T01:20:04.000Z"
+    "createdAt": "2025-08-26T01:20:04.000Z",
+    "sortNumber": 2
   },
   {
     "title": "Wake Up, Girls！",
     "subtitle": "#1「静かなる始動」",
-    "createdAt": "2025-08-26T01:20:04.000Z"
+    "createdAt": "2025-08-26T01:20:04.000Z",
+    "sortNumber": 1
+  },
+  {
+    "title": "その着せ替え人形は恋をする Season 2",
+    "subtitle": "第20話「感謝の伝え方が課金しか思い付かない」",
+    "createdAt": "2025-08-26T04:48:39.000Z",
+    "sortNumber": 2000
+  },
+  {
+    "title": "青春ブタ野郎はサンタクロースの夢を見ない",
+    "subtitle": "第8話「秘密と約束」",
+    "createdAt": "2025-08-26T04:48:41.000Z",
+    "sortNumber": 800
   }
 ]

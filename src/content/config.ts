@@ -16,6 +16,7 @@ const annictCollection = defineCollection({
       title: z.string(),
       subtitle: z.string().nullable(),
       createdAt: z.string().transform((str) => new Date(str)),
+      sortNumber: z.number().nullable(),
     }),
   ),
 });

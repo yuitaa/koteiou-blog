@@ -66,5 +66,9 @@ export const creations = [
     url: 'https://discord.gg/62AFewzRNU',
   },
   { name: 'Unrailed! 記録掲示板 (U1日本鯖)', url: null },
+  {
+    name: 'Bad Apple!! Played on Unrailed! (動画)',
+    url: 'https://youtu.be/nqEsWYl236w',
+  },
   { name: 'Kabosu Items', url: null },
 ];

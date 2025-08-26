@@ -32,6 +32,7 @@ async function getAnnictActivities(username, page) {
       createdAt: activity.created_at,
       episodeNumber: activity?.episode?.number_text,
       subtitle: activity?.episode?.title,
+      sortNumber: activity?.episode?.sort_number,
     }))
     .map((activity) => ({
       title: activity.title,
@@ -39,6 +40,7 @@ async function getAnnictActivities(username, page) {
         `${activity.episodeNumber || ''}${activity.subtitle ? `「${activity.subtitle}」` : ''}` ||
         null,
       createdAt: new Date(activity.createdAt),
+      sortNumber: activity.sortNumber ?? null,
     }));
 }
 

@@ -44,7 +44,19 @@ const dayOfWeekNames = ['月', '火', '水', '木', '金', '土', '日'];
 
 let currentIndex = 0;
 const slicedData = dayCount.map((count, index) => {
-  let slicedPart = data.slice(currentIndex, currentIndex + count);
+  let slicedPart = data
+    .slice(currentIndex, currentIndex + count)
+    .sort((a, b) => {
+      if (a.title === b.title) {
+        if (a.sortNumber !== null && b.sortNumber !== null) {
+          return a.sortNumber - b.sortNumber;
+        } else {
+          return 0;
+        }
+      } else {
+        return a.title.localeCompare(b.title);
+      }
+    });
   currentIndex += count;
   const dateString = getDisplayDate(firstDay, index).slice(5);
 
