@@ -1,0 +1,38 @@
+---
+export interface Props {
+  data: {
+    title: string | null;
+    link: string | null;
+  } | null;
+  isNextLink?: boolean;
+}
+
+import { Icon } from 'astro-icon/components';
+
+const { data, isNextLink } = Astro.props;
+---
+
+<div
+  class:list={[
+    'border-divider',
+    'border-2',
+    'p-2',
+    !isNextLink && 'text-right',
+  ]}>
+  <div class="text-secondary text-xs">{isNextLink ? 'Next' : 'Previous'}</div>
+  <div>
+    {isNextLink && <Icon name="mdi:navigate-before" class="inline" />}
+    {
+      data?.title ? (
+        <div class="inline">
+          <a class="util-link" href={data.link}>
+            {data.title}
+          </a>
+        </div>
+      ) : (
+        <div class="text-secondary inline">記事がありません</div>
+      )
+    }
+    {!isNextLink && <Icon name="mdi:navigate-next" class="inline" />}
+  </div>
+</div>

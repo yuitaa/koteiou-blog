@@ -1,0 +1,20 @@
+---
+export interface Props {
+  previous: {
+    title: string | null;
+    link: string | null;
+  } | null;
+  next: {
+    title: string | null;
+    link: string | null;
+  } | null;
+}
+
+import ArticlePaginationLink from './ArticlePaginationLink.astro';
+const { previous, next } = Astro.props;
+---
+
+<div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+  <ArticlePaginationLink data={next} isNextLink={true} />
+  <ArticlePaginationLink data={previous} />
+</div>
