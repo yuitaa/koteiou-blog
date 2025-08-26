@@ -1,17 +1,24 @@
 ---
 import { getCollection } from 'astro:content';
 import PageLayout from '@/layouts/PageLayout.astro';
+import ArticlePagination from '@/components/ArticlePagination.astro';
 
 // This function is required for Astro to generate the pages at build time.
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
-  return posts.map((post) => ({
+  const posts = (await getCollection('blog')).sort(
+    (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+  );
+  return posts.map((post, i) => ({
     params: { slug: post.slug },
-    props: post,
+    props: {
+      post,
+      previousPost: i + 1 === posts.length ? null : posts[i + 1],
+      nextPost: i === 0 ? null : posts[i - 1],
+    },
   }));
 }
 
-const post = Astro.props;
+const { post, previousPost, nextPost } = Astro.props;
 const { Content } = await post.render();
 
 const description =
@@ -46,4 +53,17 @@ const description =
       <Content />
     </div>
   </article>
+  <section class="my-2">
+    <ArticlePagination
+      previous={{
+        title: previousPost?.data.title || null,
+        link: `/blog/${previousPost?.slug}`,
+      }}
+      ,
+      next={{
+        title: nextPost?.data.title || null,
+        link: `/blog/${nextPost?.slug}`,
+      }}
+    />
+  </section>
 </PageLayout>
