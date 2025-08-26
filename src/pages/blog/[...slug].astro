@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import PageLayout from '@/layouts/PageLayout.astro';
+import ArticlePagination from '@/components/ArticlePagination.astro';
 
 // This function is required for Astro to generate the pages at build time.
 export async function getStaticPaths() {
@@ -52,4 +53,17 @@ const description =
       <Content />
     </div>
   </article>
+  <section class="my-2">
+    <ArticlePagination
+      previous={{
+        title: previousPost?.data.title || null,
+        link: `/blog/${previousPost?.slug}`,
+      }}
+      ,
+      next={{
+        title: nextPost?.data.title || null,
+        link: `/blog/${nextPost?.slug}`,
+      }}
+    />
+  </section>
 </PageLayout>
