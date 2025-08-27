@@ -7,8 +7,8 @@ import rehypeKatex from 'rehype-katex';
 import rehypeWrap from 'rehype-wrap';
 
 import mdx from '@astrojs/mdx';
-
 import icon from 'astro-icon';
+import expressiveCode from 'astro-expressive-code';
 
 // https://astro.build/config
 export default defineConfig({
@@ -31,5 +31,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  integrations: [mdx(), icon()],
+  integrations: [expressiveCode(), mdx(), icon()],
 });
