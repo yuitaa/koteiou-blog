@@ -142,4 +142,8 @@
   .util-heading {
     @apply border-divider mb-4 border-b font-bold;
   }
+
+  .expressive-code {
+    @apply my-4;
+  }
 }

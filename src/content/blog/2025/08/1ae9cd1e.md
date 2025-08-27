@@ -8,7 +8,7 @@ tags: [Unrailed2]
 
 ## settingsFNA.txt
 
-```
+```frame="code" title="settingsFNA.txt"
 HideSidebarUI True
 DisableAutoOpenTaskUI False
 PrivacyPolicyShownAtStartup True
@@ -50,7 +50,7 @@ StrictFollow True
 
 # godot_settings.godot
 
-```ini
+```ini title="godot_settings.godot"
 [display]
 
 window/size/mode=0
@@ -70,7 +70,7 @@ rendering_device/driver.windows="opengl3"
 
 ## keyboardremapsingle.txt
 
-```
+```frame="code" title="keyboardremapsingle.txt"
 Emoji1 D3
 Emoji2 D2
 Emoji3 D1
