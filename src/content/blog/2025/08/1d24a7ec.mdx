@@ -1,0 +1,163 @@
+---
+title: 'U.L.T.R.A. ふりかえり'
+pubDate: 2025-08-28
+tags: ['Unrailed2', 'ULTRA']
+---
+
+import { YouTube } from '@astro-community/astro-embed-youtube';
+import { Tweet } from '@astro-community/astro-embed-twitter';
+
+U.L.T.R.A.無事終了しました。今回自分はウェブサイトの制作と大会運営として関わらさせていただきました。
+
+当日はU2日本鯖で観戦していました。特に決勝は大勢の人が集まって盛り上がった。む〜しゅうわさんの解説が本当に素晴らしかったのでまだの人は是非聞いて。
+
+- https://ultra-u2.vercel.app/ultra
+
+<YouTube
+  id="Ii0yCuBtZ78"
+  title="【Unrailed2】コミュニティ大会「U.L.T.R.A.」【大会運営配信】"
+/>
+
+## 振り返り: ここまで
+
+ここまでなんと133字。あまりにも文章を書く力がない。
+
+<Tweet id="https://x.com/koteiou/status/1958826614751690760" />
+
+大会中のおやつはポップコーン。
+
+れもぬってんも記事を書いているのでそちらを読んで。(書いてるはず)
+
+## 部屋案内システム
+
+だいぶ文字数が少ないので大会の裏側の解説をしてお茶を濁す。これなら文章をかけるので。
+
+大会Discordでは以下のように試合の部屋案内・特殊ルールの通知を半自動で送信できるように準備をしていた。
+
+![ULTRAの試合案内](@/assets/2025/08/ultra-navigation.png)
+
+ソースコードはGitHubに公開しているので参照して。
+
+- https://github.com/yuitaa/ultra-room-navigator
+
+このようなメッセージが送信されるようになっている。`${}`で囲まれた部分が[置き換えられ](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Template_literals)て実際に送信されるメッセージが作られる。置き換わる部分を見てみよう。
+
+```js title="src/main.js#L22-L44"
+`${team[0]} vs ${team[1]}
+${team[0]} のリーダーはオンラインロビーを作成してください！
+作成完了後、このチャットにルームIDを記載してください！（例：RoomID: XXXXX）
+
+特殊ルールは **${specialRule.name}** です。
+すべてのプレイヤーで${specialRule.buildRuleText()}に設定されていること\
+${
+  specialRule.cartridgeRule
+    ? `、そして『${specialRule.cartridgeRule}』こと`
+    : ''
+}を確認してください。\
+${specialRule.ruleAdditionalText ? '\n' + specialRule.ruleAdditionalText : ''}
+${team[0]} が上（赤チーム）、${team[1]} が下（青チーム）に乗りゲームを開始してください。
+
+入室後確認・準備が整ったチームはこのチャットに『rdy』と記載をお願いします！
+両チームのrdyを確認したら試合を始めてください！
+
+試合終了後、勝利チームは自分のチームのメンション、勝利宣言、自分チームと敵チームの勝利駅数をこのチャットに報告してください！
+
+報告例（自チームの勝利駅数が4、相手チームの勝利駅数が2で勝利した場合）
+> [@チームへのメンション] win 4-2`;
+```
+
+`team[0]`, `team[1]` はチームのロールへのメンション。1行目で左に書かれているチームが部屋のホスト・上(赤)チームになる。ちなみに上下差によるチームの有利不利を軽減するため、どのチームも上3・下4または上4・下3回ずつになるよう入れ替えを行って調整している。
+
+```js title="src/matches.js#L5-L14"
+pre1: {
+  roundText: '予選第1試合',
+  rule: specialRule.turbo,
+  teams: [
+    [TEAM_ROLE_MENTION[1], TEAM_ROLE_MENTION[8]],
+    [TEAM_ROLE_MENTION[2], TEAM_ROLE_MENTION[7]],
+    [TEAM_ROLE_MENTION[6], TEAM_ROLE_MENTION[3]],
+    [TEAM_ROLE_MENTION[4], TEAM_ROLE_MENTION[5]],
+  ],
+},
+```
+
+このように試合ごとにルールとチームの組み合わせを保存して使用している。ルールを示している `specialRule.turbo` の定義を見るとこんな感じ。
+
+```js title="src/rules.js#L17-L24"
+turbo: new SpecialRule('ターボモード', [
+  TEXT_TEMPLATE.MODE_VERSUS,
+  TEXT_TEMPLATE.STATION_INFINITY,
+  TEXT_TEMPLATE.SPEED_3X,
+  TEXT_TEMPLATE.TEAM_FIXED,
+  TEXT_TEMPLATE.ENGINE_PUSHER,
+  TEXT_TEMPLATE.BIOME_PLAIN,
+]),
+```
+
+ルールの説明文を定義している `TEXT_TEMPLATE` を見てみるとこうなっている。
+
+```js title="src/consts.js#L11-L28"
+export const TEXT_TEMPLATE = {
+  MODE_VERSUS: '対戦モード',
+  BIOME_PLAIN: 'スタート地点: モノレール平原',
+  STATION_INFINITY: '駅の数: ∞（無限）',
+  SPEED_2X: 'スピード倍率: 2x',
+  SPEED_3X: '**スピード倍率: 3x**',
+  TEAM_FIXED: '固定チーム: ☑（有効）',
+  ENGINE_STEAM: 'エンジン: ハイドロ汽車',
+  ENGINE_PUSHER: '**エンジン: 推進式エンジン**',
+
+  CARTRIDGE_HIGHLANDER: '**カートリッジに被りがない**',
+  CARTRIDGE_SPECIALIST:
+    '**各プレイヤー、パッシブカートリッジが1種類だけである**',
+  CARTRIDGE_CLASSIC: '**各プレイヤー、アクションカートリッジを装備していない**',
+
+  REVERSE_RUN_RULE:
+    'そして、『**2駅目以降でワゴンの並びを変更する**』ことを忘れず行ってください！',
+};
+```
+
+つまり、先ほどの `specialRule.turbo` の定義はこうなる。
+
+```js title="src/rules.js#L17-L24"
+turbo: new SpecialRule('ターボモード', [
+  "対戦モード",
+  "駅の数: ∞（無限）",
+  '**スピード倍率: 3x**',
+  '固定チーム: ☑（有効）',
+  '**エンジン: 推進式エンジン**',
+  'スタート地点: モノレール平原',
+]),
+```
+
+これで残った部分の置き換えはこうなる。ターボモードはカートリッジのルールがないので空白。
+
+{/* prettier-ignore */}
+|置き換え前|置き換え後|
+|---|---|
+|`${specialRule.name}`|ターボモード|
+|`${specialRule.buildRuleText()}`|『対戦モード』『駅の数: ∞（無限）』『**スピード倍率: 3x**』『固定チーム: ☑（有効）』『**エンジン: 推進式エンジン**』『スタート地点: モノレール平原』|
+|``${specialRule.cartridgeRule? `、そして『${specialRule.cartridgeRule}』こと`: ''}``|(空白)|
+|`${specialRule.ruleAdditionalText ? '\n' + specialRule.ruleAdditionalText : ''}`|(空白)|
+
+```txt title="最終的にこうなる" frame="terminal"
+<@&1377279378983223306> vs <@&1403012226142437406>
+<@&1377279378983223306> のリーダーはオンラインロビーを作成してください！
+作成完了後、このチャットにルームIDを記載してください！（例：RoomID: XXXXX）
+
+特殊ルールは **ターボモード** です。
+すべてのプレイヤーで『対戦モード』『駅の数: ∞（無限）』『**スピード倍率: 3x**』『固定チーム: ☑（有効）』『**エンジン: 推進式エンジン**』『スタート地点: モノレール平原』に設定されていることを確認してください。
+<@&1377279378983223306> が上（赤チーム）、<@&1403012226142437406> が下（青チーム）に乗りゲームを開始してください。
+
+入室後確認・準備が整ったチームはこのチャットに『rdy』と記載をお願いします！
+両チームのrdyを確認したら試合を始めてください！
+
+試合終了後、勝利チームは自分のチームのメンション、勝利宣言、自分チームと敵チームの勝利駅数をこのチャットに報告してください！
+
+報告例（自チームの勝利駅数が4、相手チームの勝利駅数が2で勝利した場合）
+> [@チームへのメンション] win 4-2
+```
+
+こうして参加者の皆様の下へ部屋案内の通知が届けられたのでした。
+
+大会の振り返り記事とは...
