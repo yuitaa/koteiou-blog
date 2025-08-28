@@ -68,9 +68,9 @@ renderer/rendering_method="gl_compatibility"
 rendering_device/driver.windows="opengl3"
 ```
 
-##txt keyboardremapsingle.txt
+## keyboardremapsingle.txt
 
-```frame="code" title="keyboardremapsingle.txt"
+```txt frame="code" title="keyboardremapsingle.txt"
 Emoji1 D3
 Emoji2 D2
 Emoji3 D1
