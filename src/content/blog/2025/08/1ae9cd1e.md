@@ -8,7 +8,7 @@ tags: [Unrailed2]
 
 ## settingsFNA.txt
 
-```frame="code" title="settingsFNA.txt"
+```txt frame="code" title="settingsFNA.txt"
 HideSidebarUI True
 DisableAutoOpenTaskUI False
 PrivacyPolicyShownAtStartup True
@@ -68,7 +68,7 @@ renderer/rendering_method="gl_compatibility"
 rendering_device/driver.windows="opengl3"
 ```
 
-## keyboardremapsingle.txt
+##txt keyboardremapsingle.txt
 
 ```frame="code" title="keyboardremapsingle.txt"
 Emoji1 D3
