@@ -147,3 +147,9 @@
     @apply my-4;
   }
 }
+
+@layer components {
+  lite-youtube {
+    @apply mx-auto my-4;
+  }
+}
