@@ -17,6 +17,7 @@
 @layer base {
   body {
     @apply text-text-primary;
+    text-spacing-trim: space-all;
   }
 
   .markdown h1,
@@ -145,5 +146,11 @@
 
   .expressive-code {
     @apply my-4;
+  }
+}
+
+@layer components {
+  lite-youtube {
+    @apply mx-auto my-4;
   }
 }

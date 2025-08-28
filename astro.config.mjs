@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import rehypeWrap from 'rehype-wrap';
+import rehypeExternalLinks from 'rehype-external-links';
 
 import mdx from '@astrojs/mdx';
 import icon from 'astro-icon';
@@ -22,6 +23,13 @@ export default defineConfig({
         {
           selector: 'table',
           wrapper: 'div.overflow-x-auto',
+        },
+      ],
+      [
+        rehypeExternalLinks,
+        {
+          target: '_blank',
+          rel: ['noopener', 'noreferrer'],
         },
       ],
     ],
