@@ -17,6 +17,7 @@
 @layer base {
   body {
     @apply text-text-primary;
+    text-spacing-trim: space-all;
   }
 
   .markdown h1,
