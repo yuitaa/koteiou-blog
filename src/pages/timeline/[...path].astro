@@ -1,0 +1,26 @@
+---
+import ArticleList from '@/components/ArticleList.astro';
+import PageLayout from '@/layouts/PageLayout.astro';
+import { timelinePaths } from '@/utils/data.mjs';
+
+export function getStaticPaths() {
+  return timelinePaths;
+}
+
+const { path } = Astro.params;
+const { title, data } = Astro.props;
+---
+
+<PageLayout title={path ? `${title}投稿一覧` : undefined}>
+  <div
+    class="border-divider timeline-links mb-2 flex flex-wrap gap-2 border-2 p-2">
+    {
+      timelinePaths.map((path) => (
+        <a href={`/timeline/${path.params.path || ''}/`} class="util-link">
+          {path.props.title}
+        </a>
+      ))
+    }
+  </div>
+  <ArticleList {data} />
+</PageLayout>

@@ -12,17 +12,20 @@ export const blogData = (await getCollection('blog'))
     url: `/blog/${article.slug}/`,
     image: article.data.image,
     newTab: false,
-  }));
+  }))
+  .sort((a, b) => b.pubDate.valueOf() - a.pubDate.valueOf());
 
-export const unrailedMapData = unrailedMaps.map((map) => ({
-  type: 'custommap',
-  title: map.name,
-  pubDate: new Date(map.lastUploadDate),
-  tags: map.tags,
-  url: `https://u2.unrailed-online.com/#/map/${map.shareId}`,
-  image: `https://u2.unrailed-online.com/CustomMap/Screenshot/${map.customMapId}`,
-  newTab: true,
-}));
+export const unrailedMapData = unrailedMaps
+  .map((map) => ({
+    type: 'custommap',
+    title: map.name,
+    pubDate: new Date(map.lastUploadDate),
+    tags: map.tags,
+    url: `https://u2.unrailed-online.com/#/map/${map.shareId}`,
+    image: `https://u2.unrailed-online.com/CustomMap/Screenshot/${map.customMapId}`,
+    newTab: true,
+  }))
+  .sort((a, b) => b.pubDate.valueOf() - a.pubDate.valueOf());
 
 export const allPostData = [...blogData, ...unrailedMapData].sort(
   (a, b) => b.pubDate.valueOf() - a.pubDate.valueOf(),
@@ -49,3 +52,15 @@ export const allPostTags = [
 export const annictData = (await getCollection('annict')).sort((a, b) =>
   a.id.localeCompare(b.id),
 );
+
+export const timelinePaths = [
+  {
+    params: { path: undefined },
+    props: { title: '全ての投稿', data: allPostData },
+  },
+  { params: { path: 'blog' }, props: { title: 'ブログ', data: blogData } },
+  {
+    params: { path: 'custommap' },
+    props: { title: 'カスタムマップ', data: unrailedMapData },
+  },
+];
