@@ -36,8 +36,23 @@ export default defineConfig({
   },
 
   vite: {
+    // @ts-ignore
     plugins: [tailwindcss()],
   },
 
-  integrations: [expressiveCode(), mdx(), icon()],
+  integrations: [
+    expressiveCode({
+      themes: ['github-dark'],
+      styleOverrides: {
+        borderRadius: '0',
+        codeFontSize: '0.85rem',
+        codePaddingInline: '1rem',
+        frames: {
+          editorActiveTabIndicatorTopColor: '#1a784f',
+        },
+      },
+    }),
+    mdx(),
+    icon(),
+  ],
 });
