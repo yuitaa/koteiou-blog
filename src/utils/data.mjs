@@ -12,17 +12,20 @@ export const blogData = (await getCollection('blog'))
     url: `/blog/${article.slug}/`,
     image: article.data.image,
     newTab: false,
-  }));
+  }))
+  .sort((a, b) => b.pubDate.valueOf() - a.pubDate.valueOf());
 
-export const unrailedMapData = unrailedMaps.map((map) => ({
-  type: 'custommap',
-  title: map.name,
-  pubDate: new Date(map.lastUploadDate),
-  tags: map.tags,
-  url: `https://u2.unrailed-online.com/#/map/${map.shareId}`,
-  image: `https://u2.unrailed-online.com/CustomMap/Screenshot/${map.customMapId}`,
-  newTab: true,
-}));
+export const unrailedMapData = unrailedMaps
+  .map((map) => ({
+    type: 'custommap',
+    title: map.name,
+    pubDate: new Date(map.lastUploadDate),
+    tags: map.tags,
+    url: `https://u2.unrailed-online.com/#/map/${map.shareId}`,
+    image: `https://u2.unrailed-online.com/CustomMap/Screenshot/${map.customMapId}`,
+    newTab: true,
+  }))
+  .sort((a, b) => b.pubDate.valueOf() - a.pubDate.valueOf());
 
 export const allPostData = [...blogData, ...unrailedMapData].sort(
   (a, b) => b.pubDate.valueOf() - a.pubDate.valueOf(),
