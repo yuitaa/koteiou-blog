@@ -1,4 +1,4 @@
-import noteArticles from '@/data/noteArticles.json';
+//import noteArticles from '@/data/noteArticles.json';
 import unrailedMaps from '@/data/unrailedMaps.json';
 import { getCollection } from 'astro:content';
 
@@ -11,15 +11,6 @@ export const blogData = (await getCollection('blog')).map((article) => ({
   newTab: false,
 }));
 
-export const noteData = noteArticles.map((article) => ({
-  type: 'note',
-  title: article.title,
-  pubDate: new Date(article.pubDate),
-  tags: article.tags,
-  url: article.url,
-  newTab: true,
-}));
-
 export const unrailedMapData = unrailedMaps.map((map) => ({
   type: 'custommap',
   title: map.name,
@@ -29,7 +20,7 @@ export const unrailedMapData = unrailedMaps.map((map) => ({
   newTab: true,
 }));
 
-export const allPostData = [...blogData, ...noteData, ...unrailedMapData].sort(
+export const allPostData = [...blogData, ...unrailedMapData].sort(
   (a, b) => b.pubDate.valueOf() - a.pubDate.valueOf(),
 );
 
