@@ -5,12 +5,14 @@ export interface Props {
   title?: string;
   description?: string;
   image?: string;
+  bigImage?: boolean;
 }
 
 const {
   title,
   description = null,
   image = '/twitter-card-piggy.png',
+  bigImage = false,
 } = Astro.props;
 
 const titleText = title ? `${title} | koteiou.pages.dev` : `koteiou.pages.dev`;
@@ -34,7 +36,10 @@ const imageUrl = new URL(image, Astro.url).href;
     <meta property="og:image" content={imageUrl} />
     <meta property="og:url" content={Astro.url} />
     <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:card"
+      content={bigImage ? 'summary_large_image' : 'summary'}
+    />
     <meta name="twitter:title" content={titleText} />
     {description && <meta name="twitter:description" content={description} />}
     <meta name="twitter:image" content={imageUrl} />

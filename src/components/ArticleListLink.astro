@@ -1,0 +1,80 @@
+---
+import { Image } from 'astro:assets';
+
+import { padZero } from '@/utils/date.mjs';
+import { getJstDate } from '@/utils/date.mjs';
+import { Icon } from 'astro-icon/components';
+
+export interface Props {
+  type: string;
+  url: string;
+  newTab: boolean;
+  title: string;
+  tags?: string[];
+  image?: string;
+  pubDate: Date;
+  bandColor?: string;
+}
+
+const { type, url, newTab, title, tags, image, pubDate, bandColor } =
+  Astro.props;
+---
+
+<div class:list={['border-divider border-2 border-l-4 p-2', bandColor]}>
+  <a
+    href={url}
+    target={newTab ? '_blank' : '_self'}
+    rel={newTab ? 'noopener noreferrer' : undefined}>
+    <div class="aspect-video">
+      {
+        image ? (
+          <Image
+            src={image}
+            alt=""
+            width={1280}
+            height={720}
+            class:list={'h-full w-full object-cover'}
+          />
+        ) : (
+          <div class="bg-background-surface h-full place-content-center border-2 text-center">
+            {title}
+          </div>
+        )
+      }
+    </div>
+    <div class="overflow-x-hidden">
+      <div
+        class="bg-text-primary text-background-page mr-1 inline px-2 text-xs">
+        {type}
+      </div>
+      <h2 class="inline font-bold hover:underline">{title}</h2>
+    </div>
+  </a>
+
+  {
+    tags && tags.length > 0 && (
+      <div class="mt-1 flex flex-wrap gap-1">
+        {tags.map((tag) => (
+          <a
+            href={`/tags/${decodeURIComponent(tag.toLocaleLowerCase())}`}
+            class="bg-background-surface px-2 text-xs hover:underline">
+            #{tag}
+          </a>
+        ))}
+      </div>
+    )
+  }
+
+  {
+    () => {
+      const jstDate = getJstDate(pubDate);
+      return (
+        <time
+          datetime={pubDate.toISOString()}
+          class="text-text-secondary text-sm">
+          {jstDate[0]}/{padZero(jstDate[1])}/{padZero(jstDate[2])}
+        </time>
+      );
+    }
+  }
+</div>

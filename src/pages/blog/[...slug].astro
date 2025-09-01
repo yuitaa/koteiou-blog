@@ -1,13 +1,14 @@
 ---
 import { getCollection } from 'astro:content';
 import PageLayout from '@/layouts/PageLayout.astro';
+import { Image } from 'astro:assets';
 import ArticlePagination from '@/components/ArticlePagination.astro';
 
 // This function is required for Astro to generate the pages at build time.
 export async function getStaticPaths() {
-  const posts = (await getCollection('blog')).sort(
-    (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
-  );
+  const posts = (await getCollection('blog'))
+    .filter((post) => !post.data.draft)
+    .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
   return posts.map((post, i) => ({
     params: { slug: post.slug },
     props: {
@@ -22,10 +23,29 @@ const { post, previousPost, nextPost } = Astro.props;
 const { Content } = await post.render();
 
 const description =
-  post?.body?.replace(/(\r\n|\n|\r)/gm, ' ').slice(0, 120) + '...';
+  post?.body
+    ?.replace(/^import.*$/gm, '')
+    .replace(/(\r\n|\n|\r)/gm, '')
+    .slice(0, 240) + '...';
 ---
 
-<PageLayout title={post.data.title} description={description}>
+<PageLayout
+  title={post.data.title}
+  description={description}
+  image={post.data.image && post.data.image}
+  bigImage={post.data.image ? true : false}>
+  {
+    post.data.image && (
+      <Image
+        src={post.data.image}
+        alt={post.data.title}
+        width={1280}
+        height={720}
+        class:list={['mb-4']}
+      />
+    )
+  }
+
   <h1 class="util-heading text-3xl">
     {post.data.title}
   </h1>

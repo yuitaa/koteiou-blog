@@ -1,24 +1,18 @@
-import noteArticles from '@/data/noteArticles.json';
+//import noteArticles from '@/data/noteArticles.json';
 import unrailedMaps from '@/data/unrailedMaps.json';
 import { getCollection } from 'astro:content';
 
-export const blogData = (await getCollection('blog')).map((article) => ({
-  type: 'blog',
-  title: article.data.title,
-  pubDate: article.data.pubDate,
-  tags: article.data.tags,
-  url: `/blog/${article.slug}/`,
-  newTab: false,
-}));
-
-export const noteData = noteArticles.map((article) => ({
-  type: 'note',
-  title: article.title,
-  pubDate: new Date(article.pubDate),
-  tags: article.tags,
-  url: article.url,
-  newTab: true,
-}));
+export const blogData = (await getCollection('blog'))
+  .filter((post) => !post.data.draft)
+  .map((article) => ({
+    type: 'blog',
+    title: article.data.title,
+    pubDate: article.data.pubDate,
+    tags: article.data.tags,
+    url: `/blog/${article.slug}/`,
+    image: article.data.image,
+    newTab: false,
+  }));
 
 export const unrailedMapData = unrailedMaps.map((map) => ({
   type: 'custommap',
@@ -26,10 +20,11 @@ export const unrailedMapData = unrailedMaps.map((map) => ({
   pubDate: new Date(map.lastUploadDate),
   tags: map.tags,
   url: `https://u2.unrailed-online.com/#/map/${map.shareId}`,
+  image: `https://u2.unrailed-online.com/CustomMap/Screenshot/${map.customMapId}`,
   newTab: true,
 }));
 
-export const allPostData = [...blogData, ...noteData, ...unrailedMapData].sort(
+export const allPostData = [...blogData, ...unrailedMapData].sort(
   (a, b) => b.pubDate.valueOf() - a.pubDate.valueOf(),
 );
 

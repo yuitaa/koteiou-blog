@@ -6,7 +6,6 @@ import { allPostData } from '@/utils/data.mjs';
 export function getStaticPaths() {
   return [
     { params: { type: 'blog' }, props: { title: 'ブログ' } },
-    { params: { type: 'note' }, props: { title: 'note' } },
     { params: { type: 'custommap' }, props: { title: 'カスタムマップ' } },
   ];
 }
