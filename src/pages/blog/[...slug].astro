@@ -23,7 +23,10 @@ const { post, previousPost, nextPost } = Astro.props;
 const { Content } = await post.render();
 
 const description =
-  post?.body?.replace(/(\r\n|\n|\r)/gm, ' ').slice(0, 120) + '...';
+  post?.body
+    ?.replace(/^import.*$/gm, '')
+    .replace(/(\r\n|\n|\r)/gm, '')
+    .slice(0, 240) + '...';
 ---
 
 <PageLayout
