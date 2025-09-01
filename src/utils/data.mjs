@@ -52,3 +52,15 @@ export const allPostTags = [
 export const annictData = (await getCollection('annict')).sort((a, b) =>
   a.id.localeCompare(b.id),
 );
+
+export const timelinePaths = [
+  {
+    params: { path: undefined },
+    props: { title: '全ての投稿', data: allPostData },
+  },
+  { params: { path: 'blog' }, props: { title: 'ブログ', data: blogData } },
+  {
+    params: { path: 'custommap' },
+    props: { title: 'カスタムマップ', data: unrailedMapData },
+  },
+];
