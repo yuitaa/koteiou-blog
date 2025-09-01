@@ -26,7 +26,11 @@ const description =
   post?.body?.replace(/(\r\n|\n|\r)/gm, ' ').slice(0, 120) + '...';
 ---
 
-<PageLayout title={post.data.title} description={description}>
+<PageLayout
+  title={post.data.title}
+  description={description}
+  image={post.data.image && post.data.image}
+  bigImage={post.data.image ? true : false}>
   {
     post.data.image && (
       <Image
