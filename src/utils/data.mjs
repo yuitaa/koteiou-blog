@@ -2,14 +2,16 @@
 import unrailedMaps from '@/data/unrailedMaps.json';
 import { getCollection } from 'astro:content';
 
-export const blogData = (await getCollection('blog')).map((article) => ({
-  type: 'blog',
-  title: article.data.title,
-  pubDate: article.data.pubDate,
-  tags: article.data.tags,
-  url: `/blog/${article.slug}/`,
-  newTab: false,
-}));
+export const blogData = (await getCollection('blog'))
+  .filter((post) => !post.data.draft)
+  .map((article) => ({
+    type: 'blog',
+    title: article.data.title,
+    pubDate: article.data.pubDate,
+    tags: article.data.tags,
+    url: `/blog/${article.slug}/`,
+    newTab: false,
+  }));
 
 export const unrailedMapData = unrailedMaps.map((map) => ({
   type: 'custommap',
