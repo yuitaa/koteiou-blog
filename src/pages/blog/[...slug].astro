@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import PageLayout from '@/layouts/PageLayout.astro';
+import { Image } from 'astro:assets';
 import ArticlePagination from '@/components/ArticlePagination.astro';
 
 // This function is required for Astro to generate the pages at build time.
@@ -26,6 +27,18 @@ const description =
 ---
 
 <PageLayout title={post.data.title} description={description}>
+  {
+    post.data.image && (
+      <Image
+        src={post.data.image}
+        alt={post.data.title}
+        width={1280}
+        height={720}
+        class:list={['mb-4']}
+      />
+    )
+  }
+
   <h1 class="util-heading text-3xl">
     {post.data.title}
   </h1>
