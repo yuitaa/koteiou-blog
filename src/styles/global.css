@@ -96,7 +96,7 @@
   }
 
   .markdown img {
-    @apply mx-auto my-6 block h-auto max-h-[50vh] max-w-full rounded-md;
+    @apply mx-auto my-4 block rounded-md;
   }
 
   .markdown hr {
