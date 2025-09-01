@@ -1,7 +1,7 @@
 ---
 title: 'U2設定'
 pubDate: 2025-08-26
-tags: [Unrailed2]
+tags: ['Unrailed2']
 ---
 
 バックアップ用に。
@@ -41,11 +41,12 @@ VolumeMusic 29
 HighscoreNotificationActive False
 HighscoreMenu "3|1|0|0|0|1"
 TimeModedNotificationActive False
-DoNotDropRailsOnAction False
+DoNotDropRailsOnAction True
 EnableChessBossStatic True
 EarlyAccessSurveyShownAtStartup True
 AltCamera False
 StrictFollow True
+ExtendedInfoByDefault True
 ```
 
 # godot_settings.godot
