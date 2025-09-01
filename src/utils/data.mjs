@@ -10,6 +10,7 @@ export const blogData = (await getCollection('blog'))
     pubDate: article.data.pubDate,
     tags: article.data.tags,
     url: `/blog/${article.slug}/`,
+    image: article.data.image,
     newTab: false,
   }));
 
@@ -19,6 +20,7 @@ export const unrailedMapData = unrailedMaps.map((map) => ({
   pubDate: new Date(map.lastUploadDate),
   tags: map.tags,
   url: `https://u2.unrailed-online.com/#/map/${map.shareId}`,
+  image: `https://u2.unrailed-online.com/CustomMap/Screenshot/${map.customMapId}`,
   newTab: true,
 }));
 
