@@ -1,0 +1,25 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+import { blogData } from '@/utils/data.mjs';
+import { getJstDate, padZero } from '@/utils/date.mjs';
+---
+
+<PageLayout title="アーカイブ">
+  <section class="markdown">
+    <h2>アーカイブ</h2>
+    <ul class="list-none pl-0">
+      {
+        blogData.map((post) => (
+          <li>
+            <span class="text-text-secondary">
+              {getJstDate(post.pubDate)
+                .map((a) => padZero(a))
+                .join('/')}
+            </span>
+            <a href={post.url}>{post.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</PageLayout>

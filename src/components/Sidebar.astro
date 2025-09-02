@@ -15,6 +15,7 @@ const links = [
   },
   { href: '/tags', text: 'タグ一覧' },
   { href: '/anime', text: '視聴記録' },
+  { href: '/archive', text: 'アーカイブ' },
   { href: '/rss.xml', text: 'RSS' },
 ];
 ---
@@ -78,5 +79,22 @@ const links = [
         </a>
       ))
     }
+  </div>
+</section>
+
+<section class="border-divider mt-2 border-2 p-2">
+  <h2 class="font-bold">ビルド時間</h2>
+  <div>
+    {
+      new Intl.DateTimeFormat('ja-JP', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false,
+        timeZone: 'Asia/Tokyo',
+      }).format(new Date())
+    } (JST)
   </div>
 </section>
