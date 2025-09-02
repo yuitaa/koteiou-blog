@@ -22,7 +22,7 @@ export const unrailedMapData = unrailedMaps
     pubDate: new Date(map.lastUploadDate),
     tags: map.tags,
     url: `https://u2.unrailed-online.com/#/map/${map.shareId}`,
-    image: `https://u2.unrailed-online.com/CustomMap/Screenshot/${map.customMapId}`,
+    image: `/api/u2-image/${map.customMapId}.webp`,
     newTab: true,
   }))
   .sort((a, b) => b.pubDate.valueOf() - a.pubDate.valueOf());
