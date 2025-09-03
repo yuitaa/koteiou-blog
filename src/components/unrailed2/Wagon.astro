@@ -9,7 +9,7 @@ const imagePath = baseLevel
 interface Props {
   wagon: string;
   baseLevel?: number;
-  level?: number;
+  level?: string;
 }
 
 const wagonImage = (await wagonImages[imagePath]()) as {
@@ -17,7 +17,14 @@ const wagonImage = (await wagonImages[imagePath]()) as {
 };
 ---
 
-<div class="w-20 flex-shrink-0 lg:flex-shrink">
+<div class="relative w-20 flex-shrink-0 lg:flex-shrink">
   <div class="grid grid-flow-row grid-cols-2"><slot /></div>
   <Image src={wagonImage.default} alt={wagon} class="m-0" />
+  {
+    level && (
+      <div class="bg-background-surface/50 absolute top-0 right-0 px-1">
+        {level}
+      </div>
+    )
+  }
 </div>
