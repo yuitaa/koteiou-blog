@@ -1,7 +1,7 @@
 ---
 import { wagonImages } from '@/utils/image.mjs';
 import { Image } from 'astro:assets';
-const { wagon, baseLevel, level } = Astro.props;
+const { wagon, baseLevel, levelText: level } = Astro.props;
 const imagePath = baseLevel
   ? `/src/assets/unrailed2/wagons/${baseLevel}/${wagon}_s${baseLevel}.png`
   : `/src/assets/unrailed2/wagons/engine/${wagon}_s.png`;
@@ -9,7 +9,7 @@ const imagePath = baseLevel
 interface Props {
   wagon: string;
   baseLevel?: number;
-  level?: string;
+  levelText?: string;
 }
 
 const wagonImage = (await wagonImages[imagePath]()) as {
