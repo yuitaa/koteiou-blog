@@ -1,0 +1,15 @@
+---
+import { extensionImages } from '@/utils/image.mjs';
+import { Image } from 'astro:assets';
+const { extension } = Astro.props;
+const imagePath = `/src/assets/unrailed2/extensions/${extension}.png`;
+
+interface Props {
+  extension: string;
+}
+const extensionImage = (await extensionImages[imagePath]()) as {
+  default: ImageMetadata;
+};
+---
+
+<Image src={extensionImage.default} alt={extension} class="m-0" />
