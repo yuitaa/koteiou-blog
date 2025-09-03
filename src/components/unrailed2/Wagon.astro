@@ -22,7 +22,7 @@ const wagonImage = (await wagonImages[imagePath]()) as {
   <Image src={wagonImage.default} alt={wagon} class="m-0" />
   {
     level && (
-      <div class="bg-background-surface/50 absolute top-0 right-0 px-1">
+      <div class="bg-background-surface/50 absolute right-0 bottom-0 px-1">
         {level}
       </div>
     )
