@@ -20,7 +20,7 @@ const { type, url, newTab, title, tags, image, pubDate, bandColor } =
   Astro.props;
 ---
 
-<div class:list={['border-divider border-2 border-l-4 p-2', bandColor]}>
+<li class:list={['border-divider border-2 border-l-4 p-2', bandColor]}>
   <a
     href={url}
     target={newTab ? '_blank' : '_self'}
@@ -77,4 +77,4 @@ const { type, url, newTab, title, tags, image, pubDate, bandColor } =
       );
     }
   }
-</div>
+</li>
