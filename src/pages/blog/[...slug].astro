@@ -8,7 +8,12 @@ import ArticlePagination from '@/components/ArticlePagination.astro';
 export async function getStaticPaths() {
   const posts = (await getCollection('blog'))
     .filter((post) => !post.data.draft)
-    .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+    .sort(
+      (a, b) =>
+        b.data.pubDate.getTime() - a.data.pubDate.getTime() ||
+        b.data.index - a.data.index,
+    );
+
   return posts.map((post, i) => ({
     params: { slug: post.slug },
     props: {
