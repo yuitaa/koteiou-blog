@@ -4,6 +4,11 @@ import { getCollection } from 'astro:content';
 
 export const blogData = (await getCollection('blog'))
   .filter((post) => !post.data.draft)
+  .sort(
+    (a, b) =>
+      b.data.pubDate.valueOf() - a.data.pubDate.valueOf() ||
+      b.data.index - a.data.index,
+  )
   .map((article) => ({
     type: 'blog',
     title: article.data.title,
@@ -12,8 +17,7 @@ export const blogData = (await getCollection('blog'))
     url: `/blog/${article.slug}/`,
     image: article.data.image,
     newTab: false,
-  }))
-  .sort((a, b) => b.pubDate.valueOf() - a.pubDate.valueOf());
+  }));
 
 export const unrailedMapData = unrailedMaps
   .map((map) => ({
