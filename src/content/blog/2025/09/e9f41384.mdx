@@ -1,0 +1,126 @@
+---
+title: '5-5-5'
+pubDate: 2025-09-04
+tags: ['Unrailed2', 'カスタムマップ']
+image: '/cover/2025/2211170_20250831201222_1.jpg'
+---
+
+import Train from '@/components/unrailed2/Train.astro';
+import Wagon from '@/components/unrailed2/Wagon.astro';
+import Extension from '@/components/unrailed2/Extension.astro';
+
+先日公開したカスタムマップ、 [5-5-5](https://u2.unrailed-online.com/#/map/lwLj-PxUL-OdBA) について。
+
+## マップについて
+
+クロウを使った簡単なパズル。一度資材をまとめてしまうと、スタッキングカートリッジのせいで分割ができない。鉄を5つづつ取れるように考えて動く必要がある。
+
+この機構を応用すれば他の数の資材を判定することもできそう。
+
+## 構成
+
+### 列車
+
+<Train>
+  <Wagon wagon="steam" />
+  <Wagon wagon="crafter" baseLevel={6} levelText="10">
+    <Extension extension="Magnet" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+  </Wagon>
+  <Wagon wagon="compactor" baseLevel={6} levelText="11">
+    <Extension extension="Magnet" />
+    <Extension extension="PushToBox" />
+  </Wagon>
+  <Wagon wagon="crafter" baseLevel={6} levelText="10">
+    <Extension extension="Magnet" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+  </Wagon>
+  <Wagon wagon="compactor" baseLevel={6} levelText="11">
+    <Extension extension="Magnet" />
+    <Extension extension="PushToBox" />
+  </Wagon>
+  <Wagon wagon="crafter" baseLevel={6} levelText="10">
+    <Extension extension="Magnet" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+  </Wagon>
+  <Wagon wagon="compactor" baseLevel={6} levelText="11">
+    <Extension extension="Magnet" />
+    <Extension extension="PushToBox" />
+  </Wagon>
+  <Wagon wagon="tank" baseLevel={1} levelText="1" />
+  <Wagon wagon="storage" baseLevel={1} levelText="1">
+    <Extension extension="Magnet" />
+  </Wagon>
+  <Wagon wagon="tank" baseLevel={1} levelText="1" />
+  <Wagon wagon="tank" baseLevel={1} levelText="1" />
+  <Wagon wagon="crafter" baseLevel={6} levelText="8">
+    <Extension extension="PullFromBox" />
+  </Wagon>
+</Train>
+
+- それぞれの圧縮ワゴンには鉄材が1つずつ入っている。
+- それぞれのクラフトワゴンの近くには、マグネットで拾える5つの木材が設置されている。
+- 貨物ワゴンには圧縮木材が3つ入っている。
+
+### プレイヤー
+
+- クロウ
+- 17xスタッキング
+- 2xマグネット
+
+### 条件
+
+11枚の線路が必要。線路を必要分クラフトするために3つの圧縮鉄材を作る必要がある。
+
+## 機構解説
+
+### 拡張追加を防ぐ
+
+カスタムマップクラフトワゴンには貨物引き寄せが自動でつくが、拡張枠を8つ埋めることでこれを防ぐことができる。鍵をつけることで機能を追加しないまま、拡張追加を防いでいる。
+
+### 鉄材の数判定
+
+それぞれのコンベアに鉄材を5つずつ乗せると必要数の圧縮石材が完成する。
+
+<Train>
+  <Wagon wagon="crafter" baseLevel={6} levelText="10">
+    <Extension extension="Magnet" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+    <Extension extension="Key" />
+  </Wagon>
+  <Wagon wagon="compactor" baseLevel={6} levelText="11">
+    <Extension extension="Magnet" />
+    <Extension extension="PushToBox" />
+  </Wagon>
+</Train>
+
+これが判定部分のひとつ分。
+
+列車の前方についているワゴンのマグネット拡張が優先されるっぽい。鉄材をコンベアで運ぶとクラフトに1つ吸われ、残りの鉄材は圧縮に入る。
+
+過剰に鉄材を搬入した場合は過剰分をクラフトに吸われる。
+
+複数回に分けて搬入した場合、追加でクラフトに吸われて鉄の数が足りなくなる。

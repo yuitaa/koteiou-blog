@@ -65,7 +65,7 @@
   }
 
   .markdown ul {
-    @apply list-disc;
+    list-style: '・';
   }
 
   .markdown ol {
@@ -97,7 +97,7 @@
   }
 
   .markdown img {
-    @apply mx-auto my-4 block rounded-md;
+    @apply mx-auto my-4 block;
   }
 
   .markdown p:has(img) {
