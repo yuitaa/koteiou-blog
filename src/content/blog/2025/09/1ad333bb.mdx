@@ -1,0 +1,48 @@
+---
+title: 'ブログで列車の画像を表示できるように'
+pubDate: 2025-09-03
+tags: ['ブログ', 'Unrailed2']
+image: '/cover/2025/u2-train-component.png'
+---
+
+import Train from '@/components/unrailed2/Train.astro';
+import Wagon from '@/components/unrailed2/Wagon.astro';
+import Extension from '@/components/unrailed2/Extension.astro';
+
+U2の列車画像を表示できるコンポーネントを作った。
+
+```jsx title="TTC#3"
+<Train>
+  <Wagon wagon="steam"></Wagon>
+  <Wagon wagon="crafter" baseLevel={3} levelText={3} />
+  <Wagon wagon="storage" baseLevel={2} levelText={2} />
+  <Wagon wagon="torpedo" baseLevel={1} levelText={1}>
+    <Extension extension="SpeedIncrease" />
+  </Wagon>
+  <Wagon wagon="carriage" baseLevel={1} levelText={1}>
+    <Extension extension="PullFromPrevious" />
+  </Wagon>
+  <Wagon wagon="dynamite" baseLevel={2} levelText={2}>
+    <Extension extension="SpeedIncrease" />
+  </Wagon>
+</Train>
+```
+
+これ(↑)でこう(↓)なる。
+
+<Train>
+  <Wagon wagon="steam"></Wagon>
+  <Wagon wagon="crafter" baseLevel={3} levelText={3} />
+  <Wagon wagon="storage" baseLevel={2} levelText={2} />
+  <Wagon wagon="torpedo" baseLevel={1} levelText={1}>
+    <Extension extension="SpeedIncrease" />
+  </Wagon>
+  <Wagon wagon="carriage" baseLevel={1} levelText={1}>
+    <Extension extension="PullFromPrevious" />
+  </Wagon>
+  <Wagon wagon="dynamite" baseLevel={2} levelText={2}>
+    <Extension extension="SpeedIncrease" />
+  </Wagon>
+</Train>
+
+ワゴン画像は以前作ったものを使っている。(参照: [/blog/2025/06/e0193290](/blog/2025/06/e0193290))
