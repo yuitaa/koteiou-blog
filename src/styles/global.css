@@ -65,7 +65,7 @@
   }
 
   .markdown ul {
-    @apply list-disc;
+    list-style: '・';
   }
 
   .markdown ol {
