@@ -94,5 +94,65 @@
     "subtitle": "9投目「みんなでジャストポケット」",
     "createdAt": "2025-09-03T01:43:31.000Z",
     "sortNumber": 900
+  },
+  {
+    "title": "ふたりソロキャンプ",
+    "subtitle": "第8話「喝！道具は正しく使え」",
+    "createdAt": "2025-09-03T04:40:13.000Z",
+    "sortNumber": 800
+  },
+  {
+    "title": "瑠璃の宝石",
+    "subtitle": "第9話「190万トンのタイムカプセル」",
+    "createdAt": "2025-09-03T04:40:15.000Z",
+    "sortNumber": 900
+  },
+  {
+    "title": "マギアレコード 魔法少女まどか☆マギカ外伝",
+    "subtitle": "第5話「あなたが割って入る隙間なんてないんですよ？」",
+    "createdAt": "2025-09-03T09:24:43.000Z",
+    "sortNumber": 500
+  },
+  {
+    "title": "マギアレコード 魔法少女まどか☆マギカ外伝",
+    "subtitle": "第4話「過去じゃないです」",
+    "createdAt": "2025-09-03T09:24:43.000Z",
+    "sortNumber": 400
+  },
+  {
+    "title": "のんのんびより りぴーと",
+    "subtitle": "第06話「ホタルと仲よくなった」",
+    "createdAt": "2025-09-03T09:49:04.000Z",
+    "sortNumber": 60
+  },
+  {
+    "title": "ゆるゆり♪♪",
+    "subtitle": "第10話「修学旅行R」",
+    "createdAt": "2025-09-03T15:19:38.000Z",
+    "sortNumber": 10
+  },
+  {
+    "title": "けいおん！",
+    "subtitle": "#11「ピンチ!」",
+    "createdAt": "2025-09-04T01:03:17.000Z",
+    "sortNumber": 11
+  },
+  {
+    "title": "けいおん！",
+    "subtitle": "#10「また合宿!」",
+    "createdAt": "2025-09-04T01:03:17.000Z",
+    "sortNumber": 10
+  },
+  {
+    "title": "けいおん！",
+    "subtitle": "#9「新入部員!」",
+    "createdAt": "2025-09-04T01:03:17.000Z",
+    "sortNumber": 9
+  },
+  {
+    "title": "けいおん！",
+    "subtitle": "#8「新歓!」",
+    "createdAt": "2025-09-04T01:03:17.000Z",
+    "sortNumber": 8
   }
 ]
