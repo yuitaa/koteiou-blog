@@ -100,10 +100,6 @@
     @apply mx-auto my-4 block;
   }
 
-  .markdown p:has(img) {
-    @apply mx-auto md:w-4/5 lg:w-3/4;
-  }
-
   .markdown hr {
     @apply border-divider my-4 border-t;
   }
