@@ -10,7 +10,7 @@ export async function GET({ params, request }) {
 
   // Sharpを使って画像をリサイズし、WebPに変換
   const resizedImageBuffer = await sharp(imageBuffer)
-    .resize(640)
+    .resize(640, 360)
     .webp({ quality: 80 })
     .toBuffer();
 
