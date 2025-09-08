@@ -310,5 +310,53 @@
     "subtitle": "第9話「金髪とピアス」",
     "createdAt": "2025-09-07T01:44:53.000Z",
     "sortNumber": 900
+  },
+  {
+    "title": "プリンセッション・オーケストラ",
+    "subtitle": "第22話「わたしのいちばんしたいこと」",
+    "createdAt": "2025-09-07T02:17:06.000Z",
+    "sortNumber": 2200
+  },
+  {
+    "title": "花咲くいろは",
+    "subtitle": "第一話「十六歳、春、まだつぼみ」",
+    "createdAt": "2025-09-07T03:38:00.000Z",
+    "sortNumber": 1
+  },
+  {
+    "title": "花咲くいろは",
+    "subtitle": "第三話「ホビロン」",
+    "createdAt": "2025-09-07T06:37:43.000Z",
+    "sortNumber": 3
+  },
+  {
+    "title": "花咲くいろは",
+    "subtitle": "第二話「復讐するは、まかないにあり」",
+    "createdAt": "2025-09-07T06:37:43.000Z",
+    "sortNumber": 2
+  },
+  {
+    "title": "花咲くいろは",
+    "subtitle": "第四話「青鷺ラプソディー」",
+    "createdAt": "2025-09-07T08:22:41.000Z",
+    "sortNumber": 4
+  },
+  {
+    "title": "けいおん！",
+    "subtitle": "#13(番外編)「冬の日!」",
+    "createdAt": "2025-09-07T12:08:03.000Z",
+    "sortNumber": 13
+  },
+  {
+    "title": "けいおん！",
+    "subtitle": "#12「軽音!」",
+    "createdAt": "2025-09-07T12:08:03.000Z",
+    "sortNumber": 12
+  },
+  {
+    "title": "けいおん！",
+    "subtitle": "#14(番外編)「ライブハウス!」",
+    "createdAt": "2025-09-07T12:08:04.000Z",
+    "sortNumber": 14
   }
 ]
