@@ -125,6 +125,10 @@
   .markdown th {
     @apply bg-background-surface font-semibold;
   }
+
+  .markdown astro-embed-tweet {
+    @apply flex flex-col items-center;
+  }
 }
 
 @layer utilities {
