@@ -124,5 +124,41 @@
     "subtitle": "第23話「七海」",
     "createdAt": "2025-09-10T01:32:58.000Z",
     "sortNumber": 2300
+  },
+  {
+    "title": "星屑テレパス",
+    "subtitle": "第1話「彗星エンカウント」",
+    "createdAt": "2025-09-10T02:44:30.000Z",
+    "sortNumber": 100
+  },
+  {
+    "title": "星屑テレパス",
+    "subtitle": "第2話「夕焼ロケット」",
+    "createdAt": "2025-09-10T02:44:31.000Z",
+    "sortNumber": 200
+  },
+  {
+    "title": "瑠璃の宝石",
+    "subtitle": "第10話「ワンセンテンスの廃線路」",
+    "createdAt": "2025-09-10T03:41:29.000Z",
+    "sortNumber": 1000
+  },
+  {
+    "title": "マギアレコード 魔法少女まどか☆マギカ外伝 2nd SEASON ‐覚醒前夜‐",
+    "subtitle": "第2話「あなたとは少しも似てなんかない」",
+    "createdAt": "2025-09-10T08:01:25.000Z",
+    "sortNumber": 200
+  },
+  {
+    "title": "マギアレコード 魔法少女まどか☆マギカ外伝 2nd SEASON ‐覚醒前夜‐",
+    "subtitle": "第1話「みんなでなら魔法少女になれる気がしたの」",
+    "createdAt": "2025-09-10T08:01:25.000Z",
+    "sortNumber": 100
+  },
+  {
+    "title": "結城友奈は勇者である",
+    "subtitle": "第一話「乙女の真心」",
+    "createdAt": "2025-09-10T13:13:50.000Z",
+    "sortNumber": 10
   }
 ]
