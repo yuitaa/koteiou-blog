@@ -160,5 +160,23 @@
     "subtitle": "第一話「乙女の真心」",
     "createdAt": "2025-09-10T13:13:50.000Z",
     "sortNumber": 10
+  },
+  {
+    "title": "よふかしのうた Season2",
+    "subtitle": "第10夜「せめてお前に」",
+    "createdAt": "2025-09-11T07:19:15.000Z",
+    "sortNumber": 1000
+  },
+  {
+    "title": "うたごえはミルフィーユ",
+    "subtitle": "第9話「うたごえはミルフィーユ」",
+    "createdAt": "2025-09-11T14:17:44.000Z",
+    "sortNumber": 900
+  },
+  {
+    "title": "銀河特急 ミルキー☆サブウェイ",
+    "subtitle": "第11話「黒幕」",
+    "createdAt": "2025-09-11T23:07:14.000Z",
+    "sortNumber": 1100
   }
 ]
