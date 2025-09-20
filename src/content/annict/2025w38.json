@@ -244,5 +244,53 @@
     "subtitle": "第12話「一年がたった」",
     "createdAt": "2025-09-19T01:51:49.000Z",
     "sortNumber": 120
+  },
+  {
+    "title": "わたしが恋人になれるわけないじゃん、ムリムリ!（※ムリじゃなかった!?）",
+    "subtitle": "第11話「いつまでもこのままでいるのは、ムリ?」",
+    "createdAt": "2025-09-19T04:15:50.000Z",
+    "sortNumber": 1100
+  },
+  {
+    "title": "花咲くいろは",
+    "subtitle": "第十一話「夜に吼える」",
+    "createdAt": "2025-09-19T04:45:49.000Z",
+    "sortNumber": 11
+  },
+  {
+    "title": "花咲くいろは",
+    "subtitle": "第十三話「四十万の女 〜傷心MIX〜」",
+    "createdAt": "2025-09-19T06:11:39.000Z",
+    "sortNumber": 13
+  },
+  {
+    "title": "花咲くいろは",
+    "subtitle": "第十二話「「じゃあな。」」",
+    "createdAt": "2025-09-19T06:11:39.000Z",
+    "sortNumber": 12
+  },
+  {
+    "title": "BanG Dream! 2nd Season",
+    "subtitle": "#9「スクール・フェスティバル・シンフォニー」",
+    "createdAt": "2025-09-19T10:44:48.000Z",
+    "sortNumber": 90
+  },
+  {
+    "title": "BanG Dream! 2nd Season",
+    "subtitle": "#10「R·I·O·T」",
+    "createdAt": "2025-09-19T10:44:53.000Z",
+    "sortNumber": 100
+  },
+  {
+    "title": "結城友奈は勇者である",
+    "subtitle": "第九話「心の痛みを判る人」",
+    "createdAt": "2025-09-19T13:35:06.000Z",
+    "sortNumber": 90
+  },
+  {
+    "title": "ゲーセン少女と異文化交流",
+    "subtitle": "第10話「OKF Tournament」",
+    "createdAt": "2025-09-19T22:44:53.000Z",
+    "sortNumber": 1000
   }
 ]
