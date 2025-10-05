@@ -154,5 +154,41 @@
     "subtitle": "第12話「My Feelings Haven't Changed」",
     "createdAt": "2025-10-03T23:50:36.000Z",
     "sortNumber": 1200
+  },
+  {
+    "title": "天穂のサクナヒメ",
+    "subtitle": "第二話「ヒノエ島に住まう」",
+    "createdAt": "2025-10-04T02:45:01.000Z",
+    "sortNumber": 200
+  },
+  {
+    "title": "天穂のサクナヒメ",
+    "subtitle": "第一話「頂の世のサクナヒメ」",
+    "createdAt": "2025-10-04T02:45:01.000Z",
+    "sortNumber": 100
+  },
+  {
+    "title": "天穂のサクナヒメ",
+    "subtitle": "第三話「田植唄」",
+    "createdAt": "2025-10-04T02:45:02.000Z",
+    "sortNumber": 300
+  },
+  {
+    "title": "SSSS.GRIDMAN",
+    "subtitle": "#12「覚醒」",
+    "createdAt": "2025-10-04T04:09:45.000Z",
+    "sortNumber": 120
+  },
+  {
+    "title": "SSSS.GRIDMAN",
+    "subtitle": "#11「決・戦」",
+    "createdAt": "2025-10-04T04:09:45.000Z",
+    "sortNumber": 110
+  },
+  {
+    "title": "SSSS.GRIDMAN",
+    "subtitle": "#10「崩・壊」",
+    "createdAt": "2025-10-04T04:09:45.000Z",
+    "sortNumber": 100
   }
 ]
