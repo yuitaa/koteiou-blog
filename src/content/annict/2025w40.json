@@ -190,5 +190,47 @@
     "subtitle": "#10「崩・壊」",
     "createdAt": "2025-10-04T04:09:45.000Z",
     "sortNumber": 100
+  },
+  {
+    "title": "プリンセッション・オーケストラ",
+    "subtitle": "第25話「誕生特別編(仮)」",
+    "createdAt": "2025-10-05T03:34:09.000Z",
+    "sortNumber": 2500
+  },
+  {
+    "title": "薫る花は凛と咲く",
+    "subtitle": "第13話「薫子と凛太郎」",
+    "createdAt": "2025-10-05T04:01:02.000Z",
+    "sortNumber": 1300
+  },
+  {
+    "title": "BanG Dream! 2nd Season",
+    "subtitle": "#12「Returns」",
+    "createdAt": "2025-10-05T04:47:33.000Z",
+    "sortNumber": 120
+  },
+  {
+    "title": "花咲くいろは HOME SWEET HOME",
+    "subtitle": null,
+    "createdAt": "2025-10-05T06:13:16.000Z",
+    "sortNumber": null
+  },
+  {
+    "title": "ウィッチウォッチ",
+    "subtitle": "第25話「駆け出し魔女と使い魔たち」",
+    "createdAt": "2025-10-05T09:22:00.000Z",
+    "sortNumber": 2500
+  },
+  {
+    "title": "メイドインアビス 烈日の黄金郷",
+    "subtitle": "第4話「友人」",
+    "createdAt": "2025-10-05T13:00:10.000Z",
+    "sortNumber": 400
+  },
+  {
+    "title": "メイドインアビス 烈日の黄金郷",
+    "subtitle": "第3話「成れ果て村」",
+    "createdAt": "2025-10-05T13:00:10.000Z",
+    "sortNumber": 300
   }
 ]
