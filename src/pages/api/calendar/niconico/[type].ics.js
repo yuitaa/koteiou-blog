@@ -102,6 +102,7 @@ export async function GET({ params, request }) {
       `DTEND:${convertDateString(e.end)}`,
       `UID:${e.uid}`,
       `URL:${e.url}`,
+      `DESCRIPTION:${e.url}`,
       `DTSTAMP:${dtstamp}`,
       'END:VEVENT',
     );
